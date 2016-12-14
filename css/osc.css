@@ -48,12 +48,8 @@ body, html {
 	height: 327px;
 }
 
-body, h1, h2, h3, h4, h5, h6 {
-	font-family: "Lato", sans-serif;
-}
-
 body, html {
-	font-family: "Lato", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	height: 100%;
 	color: #777;
 	line-height: 1.8;
