@@ -13,6 +13,12 @@ body, html {
     height: 100%;
 }
 
+/* Android UI guidelines https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately*/
+.recomended-min-button-size {
+  min-width: 47px;
+  min-height: 47px;
+}
+
 @media screen and (max-height: 320px) {
   .bgimg-1{
     background-image: url('../images/14469337569_fe1a849240_o_320.jpg');
