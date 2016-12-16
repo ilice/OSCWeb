@@ -1,209 +1,305 @@
 /*Open Smart Country Icon Font*/
 
-@font-face {
-  font-family: 'oscIconFont';
-  src:  url('../fonts/oscIconFont.eot?u3lzsa');
-  src:  url('../fonts/oscIconFont.eot?u3lzsa#iefix') format('embedded-opentype'),
-    url('../fonts/oscIconFont.ttf?u3lzsa') format('truetype'),
-    url('../fonts/oscIconFont.woff?u3lzsa') format('woff'),
-    url('../fonts/oscIconFont.svg?u3lzsa#oscIconFont') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@font-face
+{
+    font-family: 'oscIconFont';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/oscIconFont.eot?3vqivc');
+    src: url('../fonts/oscIconFont.eot?3vqivc#iefix') format('embedded-opentype'),
+    url('../fonts/oscIconFont.ttf?3vqivc') format('truetype'),
+    url('../fonts/oscIconFont.woff?3vqivc') format('woff'),
+    url('../fonts/oscIconFont.svg?3vqivc#oscIconFont') format('svg');
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'oscIconFont' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+[class^='icon-'],
+[class*=' icon-']
+{
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'oscIconFont' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    text-transform: none;
 
-.icon-ocs:before {
-  content: "\6f";
-}
-.icon-osc-filled:before {
-  content: "\73";
-}
-.icon-osc-bold:before {
-  content: "\4f";
-}
-.icon-osc-bold-filled:before {
-  content: "\53";
-}
-.icon-osc-inner:before {
-  content: "\63";
+    speak: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-
-body, html {
-	font-family: 'Roboto', sans-serif;
-	height: 100%;
-	margin: 0;
+.icon-github:before
+{
+    content: '\eab0';
+}
+.icon-twitter:before
+{
+    content: '\ea96';
+}
+.icon-facebook:before
+{
+    content: '\ea90';
+}
+.icon-facebook2:before
+{
+    content: '\ea91';
+}
+.icon-menu:before
+{
+    content: '\e9be';
+}
+.icon-keyboard_arrow_down:before
+{
+    content: '\e900';
+}
+.icon-ocs:before
+{
+    content: '\6f';
+}
+.icon-osc-filled:before
+{
+    content: '\73';
+}
+.icon-osc-bold:before
+{
+    content: '\4f';
+}
+.icon-osc-bold-filled:before
+{
+    content: '\53';
+}
+.icon-osc-icon-inner:before
+{
+    content: '\63';
 }
 
-.menu {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  left: 0;
+/*Open Smart Country Icon Font*/
+
+
+body,
+html
+{
+    font-family: 'open sans',arial,sans-serif;
+
+    height: 100%;
+    margin: 0;
+
+    -webkit-font-smoothing: antialiased;
 }
 
-.menu ul{
-  padding: 0;
-  margin:0;
-}
+.menu
+{
+    font-size: 30px;
 
-.menu li {
-  display: inline-block;
-  padding: 15px;
-}
+    position: fixed;
+    left: 0;
 
-.menu .logo-item{
-  padding: 0px;
-}
+    display: inline-block;
 
-.menu a {
-  text-decoration: none;
-  color: inherit;
-}
+    width: 100%;
 
-.menu li:hover {
-    background-color: white;
-    color: #777;
-}
-
-.landing {
-  height: 100%;
-}
-
-.landing-background{
-  color: white;
-}
-
-.flex-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  font-size: 70px;
-  text-shadow: 0px 0px 30px black;
-  font-weight: normal;
-  word-spacing: -15px;
-  margin: 0;
-}
-
-.title span {
-  font-weight: bolder;
-}
-
-.subtitle {
-  margin: 0;
-  margin-bottom: 15px;
-  font-weight: lighter;
-  text-shadow: 0px 0px 50px black;
-}
-
-.button {
-  border: 1px solid white;
-  color: white;
-  padding: 7px 12px;
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-  float: left;
-  background-color: inherit;
-  font-weight: bold;
-  text-shadow: 0px 0px 20px black;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.button:hover {
-    background-color: white;
     color: grey;
-    text-shadow: none;
+    background-color: white;
 }
 
-.reverse-button{
-  background-color: white;
-  color: grey;
-  text-shadow: none;
-
+.menu ul
+{
+    margin: 0;
+    padding: 0;
 }
 
-.reverse-button:hover {
-    background-color: inherit;
+.menu li
+{
+    display: inline-block;
+
+    padding: 8px 16px 9px 24px;
+}
+
+.menu a
+{
+    text-decoration: none;
+
+    color: inherit;
+}
+
+.hoverable:hover
+{
     color: white;
-    text-shadow: 0px 0px 20px black;
+    background-color: #cfcfcf;
 }
+
+.landing
+{
+    height: 100%;
+}
+
+.flex-container
+{
+    display: flex;
+
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.logo
+{
+    font-size: 77px;
+    color: white;
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+}
+
+.title
+{
+    font-family: 'open sans',arial,sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    color: white;
+
+    margin: 0;
+
+    text-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+.button
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-top: 30px;
+    padding: 16px 26px 16px 26px;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(67, 134, 252);
+    text-shadow: rgba(0, 0, 0, .0784314) 0 -1px 0;
+}
+
+.button:hover
+{
+    background-color: rgb(34, 99, 214);
+}
+
 
 /* Android UI guidelines https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately*/
-.recomended-min-button-size {
-  min-width: 47px;
-  min-height: 47px;
+.recomended-min-button-size
+{
+    min-width: 47px;
+    min-height: 47px;
 }
 
-.bottom{
-  position: fixed;
-  bottom: 0;
+.bottom
+{
+    position: fixed;
+    bottom: 0;
 }
 
-.social-buttons{
-  display: inline-block;
-  position: absolute;
-  left: 0;
+.social-buttons
+{
+    position: absolute;
+    left: 0;
+
+    display: inline-block;
 }
 
-.left {
-  position: absolute;;
-  right: 0;
+.right
+{
+    position: absolute;
+    right: 0;
 }
 
+@media screen and (max-width: 320px)
+{
+    .landing-background
+    {
+        background-image: url('../images/14469337569_fe1a849240_o_320.jpg');
+    }
 
-@media screen and (max-height: 320px) {
-  .landing-background{
-    background-image: url('../images/14469337569_fe1a849240_o_320.jpg');
-  }
+    .landing
+    {
+        font-size: 36px;
+    }
+
+    .hide-small
+    {
+        display: none;
+    }
 }
 
-@media screen and (max-height: 768px) {
-  .landing-background{
-    background-image: url('../images/14469337569_fe1a849240_o_768.jpg');
-  }
+@media screen and (max-width: 768px)
+{
+    .landing-background
+    {
+        background-image: url('../images/14469337569_fe1a849240_o_768.jpg');
+    }
+
+    .title
+    {
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1.29;
+
+        color: #fff;
+        text-shadow: 0 2px 3px rgba(0,0,0,.4);
+    }
+
+    .hide-small
+    {
+        display: none;
+    }
+
+    .button
+    {
+        font-size: 12px;
+    }
+
+    .logo
+    {
+        font-size: 60px;
+    }
 }
 
-@media screen and (max-height: 1024px) {
-  .landing-background{
-    background-image: url('../images/14469337569_fe1a849240_o_1024.jpg');
-  }
+@media screen and (max-width: 1024px)
+{
+    .landing-background
+    {
+        background-image: url('../images/14469337569_fe1a849240_o_1024.jpg');
+    }
 }
 
-@media screen and (max-height: 1200px) {
-  .landing-background{
-    background-image: url('../images/14469337569_fe1a849240_o_1200.jpg');
-  }
+@media screen and (max-width: 1200px)
+{
+    .landing-background
+    {
+        background-image: url('../images/14469337569_fe1a849240_o_1200.jpg');
+    }
 }
 
-@media screen and (max-height: 1600px) {
-  .landing-background{
-    background-image: url('../images/14469337569_fe1a849240_o_1600.jpg');
-  }
+@media screen and (max-width: 1600px)
+{
+    .landing-background
+    {
+        background-image: url('../images/14469337569_fe1a849240_o_1600.jpg');
+    }
 }
 
-@media screen and (min-height: 1600px) {
-  .landing-background{
-    background-image: url('../images/14469337569_fe1a849240_o_4256x2832.jpg');
-  }
+@media screen and (min-width: 1600px)
+{
+    .landing-background
+    {
+        background-image: url('../images/14469337569_fe1a849240_o_4256x2832.jpg');
+    }
 }
