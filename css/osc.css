@@ -83,6 +83,7 @@ body,
 html
 {
     font-family: 'open sans',arial,sans-serif;
+    font-size: 16px;
 
     height: 100%;
     margin: 0;
@@ -92,8 +93,6 @@ html
 
 .menu
 {
-    font-size: 30px;
-
     position: fixed;
     left: 0;
 
@@ -114,8 +113,7 @@ html
 .menu li
 {
     display: inline-block;
-
-    padding: 8px 16px 9px 24px;
+    padding: 24px 13px 24px 13px;
 }
 
 .menu a
@@ -123,6 +121,10 @@ html
     text-decoration: none;
 
     color: inherit;
+}
+
+.icon-osc-bold{
+  font-size: 30px;
 }
 
 .hoverable:hover
@@ -158,7 +160,6 @@ html
 
 .title
 {
-    font-family: 'open sans',arial,sans-serif;
     font-size: 60px;
     font-weight: 300;
     font-style: normal;
@@ -172,8 +173,6 @@ html
 
 .button
 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
     font-weight: 600;
 
     margin-top: 30px;
@@ -207,6 +206,10 @@ html
     bottom: 0;
 }
 
+.float-right{
+  float: right;
+}
+
 .social-buttons
 {
     position: absolute;
@@ -228,15 +231,6 @@ html
         background-image: url('../images/14469337569_fe1a849240_o_320.jpg');
     }
 
-    .landing
-    {
-        font-size: 36px;
-    }
-
-    .hide-small
-    {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 768px)
@@ -256,7 +250,11 @@ html
         text-shadow: 0 2px 3px rgba(0,0,0,.4);
     }
 
-    .hide-small
+    .menu li{
+      padding: 8px 16px 9px 24px;
+    }
+
+    .menu .hide-small
     {
         display: none;
     }
@@ -272,12 +270,20 @@ html
     }
 }
 
+@media screen and (min-width:768px){
+  .menu .hide-large{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1024px)
 {
     .landing-background
     {
         background-image: url('../images/14469337569_fe1a849240_o_1024.jpg');
     }
+
+
 }
 
 @media screen and (max-width: 1200px)
@@ -286,6 +292,8 @@ html
     {
         background-image: url('../images/14469337569_fe1a849240_o_1200.jpg');
     }
+
+
 }
 
 @media screen and (max-width: 1600px)
@@ -294,6 +302,7 @@ html
     {
         background-image: url('../images/14469337569_fe1a849240_o_1600.jpg');
     }
+
 }
 
 @media screen and (min-width: 1600px)
@@ -302,4 +311,5 @@ html
     {
         background-image: url('../images/14469337569_fe1a849240_o_4256x2832.jpg');
     }
+
 }
