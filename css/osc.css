@@ -89,8 +89,8 @@ header
 
 header figure
 {
-
-    display: block;
+    position: absolute;
+    display: inline-block;
     float:left;
     margin: 0;
 }
@@ -126,7 +126,7 @@ header figure
     padding: 24px;
 }
 
-header a:hover, .burguer-button:hover
+header a:hover
 {
     color: white;
     background-color: #cfcfcf;
@@ -248,34 +248,41 @@ header a:hover, .burguer-button:hover
         text-shadow: 0 2px 3px rgba(0,0,0,.4);
     }
 
-    .header{
-      top:0;
-      right: 0;
-      /*Para mostrar el menú como google*/
-      /*bottom: 0;*/
-      left: 0;
+    .header {
+      position: static;
     }
 
-    .menu{
-      position: absolute;
-      top: 60px;
-      bottom: 0;
-      left: 0;
-      right: 0;
+    .menu {
       text-align: center;
-      color: blue;
+      color: #66a0fd;
+      position: absolute;
+      left: -100%;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 1);
+      display: flex;
+      align-items: center;
+      width: 100%;
+      transition: 300ms;
     }
 
-    .menu li
-    {
-        display: block;
-
+    .menu.active{
+      left: 0;
     }
 
-    .menu ul
-    {
-        padding: 0;
+    .menu ul{
+      padding: 0;
+      margin-bottom: 24px;
+    }
 
+    .menu li{
+      width: 100%;
+    }
+
+    .menu a.go-to-osc{
+      border: 1px solid #66a0fd;
+      background-color: white;
+      color: inherit;
     }
 
     .hide-small

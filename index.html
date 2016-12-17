@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Open Smart Country</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
     <meta name="keywords" content="Open Smart Country, Agrotech, IoT, Analitycs, Open Data, Parcela, Terreno" />
     <meta name="description" content="Encuentra alternativas sostenibles para parcelas en desuso basándose en análisis de Datos Abiertos y datos de Sensores" />
     <meta name="author" content="Isabel Muñoz @teanocrata" />
@@ -41,7 +41,7 @@
       <figure>
         <a class="icon-logo" href="index.html"><i class="icon-osc-bold"></i></a>
       </figure>
-        <nav class="menu hide-small">
+        <nav id="menu" class="menu">
             <ul>
                 <li>
                   <a href="index.html">Home</a>
@@ -57,7 +57,7 @@
                 </li>
             </ul>
         </nav>
-        <span class="icon-menu burguer-button hide-large"></span>
+        <span id="burguer-button" class="icon-menu burguer-button"></span>
     </header>
 
     <!-- Content -->
@@ -71,7 +71,16 @@
           </div>
       </div>
     </section>
+    <script>
+        var $burguerButton = document.getElementById("burguer-button");
+        var $menu = document.getElementById("menu");
+        $burguerButton.addEventListener('touchstart', toggleMenu);
 
+        function toggleMenu() {
+          $menu.classList.toggle('active');
+        }
+
+    </script>
     <script type="text/javascript">
         WebFontConfig = {
             google: {
