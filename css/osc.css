@@ -308,6 +308,10 @@ header a:hover
     {
         display: none;
     }
+
+    .burguer-button{
+      display: none;
+    }
 }
 
 @media screen and (max-width: 1024px)
