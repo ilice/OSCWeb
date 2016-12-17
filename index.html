@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Open Smart Country</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
     <meta name="keywords" content="Open Smart Country, Agrotech, IoT, Analitycs, Open Data, Parcela, Terreno" />
     <meta name="description" content="Encuentra alternativas sostenibles para parcelas en desuso basándose en análisis de Datos Abiertos y datos de Sensores" />
     <meta name="author" content="Isabel Muñoz @teanocrata" />
@@ -38,17 +38,26 @@
 
     <!-- Menu -->
     <header class="header">
-        <nav class="menu">
+      <figure>
+        <a class="icon-logo" href="index.html"><i class="icon-osc-bold"></i></a>
+      </figure>
+        <nav id="menu" class="menu">
             <ul>
-                <li class="hoverable">
-                    <a href="index.html"><i class="icon-osc-bold"></i></a>
+                <li>
+                  <a href="index.html">Home</a>
                 </li>
-                <li><span class="hide-small">OPEN<strong>SMART</strong>COUNTRY</span></li>
-                <li class="hoverable right">
-                    <a class="hide-large" href="index.html"><i class="icon-menu"></i></a>
+                <li>
+                  <a href="equipo.html">Quienes somos</a>
+                </li>
+                <li>
+                  <a href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                  <a class="go-to-osc" href="mapaDeParcelas.html">Ir a Open Smart Country</a>
                 </li>
             </ul>
         </nav>
+        <span id="burguer-button" class="icon-menu burguer-button"></span>
     </header>
 
     <!-- Content -->
@@ -62,7 +71,16 @@
           </div>
       </div>
     </section>
+    <script>
+        var $burguerButton = document.getElementById("burguer-button");
+        var $menu = document.getElementById("menu");
+        $burguerButton.addEventListener('touchstart', toggleMenu);
 
+        function toggleMenu() {
+          $menu.classList.toggle('active');
+        }
+
+    </script>
     <script type="text/javascript">
         WebFontConfig = {
             google: {
