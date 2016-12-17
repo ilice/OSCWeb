@@ -1,79 +1,66 @@
 /*Open Smart Country Icon Font*/
 
-@font-face
-{
-    font-family: 'oscIconFont';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('../fonts/oscIconFont.eot?3vqivc');
-    src: url('../fonts/oscIconFont.eot?3vqivc#iefix') format('embedded-opentype'),
-    url('../fonts/oscIconFont.ttf?3vqivc') format('truetype'),
-    url('../fonts/oscIconFont.woff?3vqivc') format('woff'),
-    url('../fonts/oscIconFont.svg?3vqivc#oscIconFont') format('svg');
+@font-face {
+  font-family: 'oscIconFont';
+  src:  url('../fonts/oscIconFont.eot?dz46q4');
+  src:  url('../fonts/oscIconFont.eot?dz46q4#iefix') format('embedded-opentype'),
+    url('../fonts/oscIconFont.ttf?dz46q4') format('truetype'),
+    url('../fonts/oscIconFont.woff?dz46q4') format('woff'),
+    url('../fonts/oscIconFont.svg?dz46q4#oscIconFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-[class^='icon-'],
-[class*=' icon-']
-{
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'oscIconFont' !important;
-    font-weight: normal;
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'oscIconFont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    text-transform: none;
-
-    speak: none;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-github:before
-{
-    content: '\eab0';
+.icon-close:before {
+  content: "\ea0f";
 }
-.icon-twitter:before
-{
-    content: '\ea96';
+.icon-github:before {
+  content: "\eab0";
 }
-.icon-facebook:before
-{
-    content: '\ea90';
+.icon-twitter:before {
+  content: "\ea96";
 }
-.icon-facebook2:before
-{
-    content: '\ea91';
+.icon-facebook:before {
+  content: "\ea90";
 }
-.icon-menu:before
-{
-    content: '\e9be';
+.icon-facebook2:before {
+  content: "\ea91";
 }
-.icon-keyboard_arrow_down:before
-{
-    content: '\e900';
+.icon-menu:before {
+  content: "\e9be";
 }
-.icon-ocs:before
-{
-    content: '\6f';
+.icon-ocs:before {
+  content: "\6f";
 }
-.icon-osc-filled:before
-{
-    content: '\73';
+.icon-osc-filled:before {
+  content: "\73";
 }
-.icon-osc-bold:before
-{
-    content: '\4f';
+.icon-osc-bold:before {
+  content: "\4f";
 }
-.icon-osc-bold-filled:before
-{
-    content: '\53';
+.icon-osc-bold-filled:before {
+  content: "\53";
 }
-.icon-osc-icon-inner:before
-{
-    content: '\63';
+.icon-osc-icon-inner:before {
+  content: "\63";
+}
+.icon-down:before {
+  content: "\e900";
 }
 
 /*Open Smart Country Icon Font*/
@@ -102,24 +89,22 @@ header
 
 header figure
 {
-    font-size: 30px;
 
     display: block;
     float:left;
     margin: 0;
 }
 
-.icon-logo{
-  margin-left: 20px;
-  padding: 20px 24px 20px 0px;
-  display: block;
+.icon-logo, .burguer-button{
+  padding: 20px 24px 20px 20px;
+  display: inline-block;
   text-decoration: none;
-
+  color: inherit;
+  font-size: 30px;
 }
 
 .menu
 {
-
     float: right;
     display: block;
 }
@@ -131,27 +116,39 @@ header figure
 .menu li
 {
     display: inline-block;
-    margin-left: 30px;
 }
-
-
 
 .menu a
 {
     text-decoration: none;
     display: inline-block;
-
     color: inherit;
-
     padding: 24px;
 }
 
-.menu a:hover
+header a:hover, .burguer-button:hover
 {
     color: white;
     background-color: #cfcfcf;
 }
 
+
+
+.menu a.go-to-osc{
+  background-color: rgb(67, 134, 252);
+  color: #fff;
+  cursor: auto;
+}
+
+.menu a.go-to-osc:hover{
+  background-color: rgb(34, 99, 214);
+}
+
+.burguer-button{
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
 
 
 .landing
@@ -222,25 +219,9 @@ header figure
     min-height: 47px;
 }
 
-.bottom
-{
-    position: fixed;
-    bottom: 0;
-}
 
-.social-buttons
-{
-    position: absolute;
-    left: 0;
 
-    display: inline-block;
-}
 
-.right
-{
-    position: absolute;
-    right: 0;
-}
 
 @media screen and (max-width: 320px)
 {
@@ -267,12 +248,37 @@ header figure
         text-shadow: 0 2px 3px rgba(0,0,0,.4);
     }
 
-    .menu li
-    {
-        padding: 8px 16px 9px 24px;
+    .header{
+      top:0;
+      right: 0;
+      /*Para mostrar el menú como google*/
+      /*bottom: 0;*/
+      left: 0;
     }
 
-    .menu .hide-small
+    .menu{
+      position: absolute;
+      top: 60px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: blue;
+    }
+
+    .menu li
+    {
+        display: block;
+
+    }
+
+    .menu ul
+    {
+        padding: 0;
+
+    }
+
+    .hide-small
     {
         display: none;
     }
@@ -286,11 +292,12 @@ header figure
     {
         font-size: 60px;
     }
+
 }
 
 @media screen and (min-width:768px)
 {
-    .menu .hide-large
+    .hide-large
     {
         display: none;
     }
