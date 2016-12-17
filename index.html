@@ -31,7 +31,6 @@
         ga('require', 'outboundLinkTracker');
         ga('send', 'pageview');
     </script>
-    <script async src="js/autotrack.js"></script>
 </head>
 
 <body class="landing-background">
@@ -71,6 +70,7 @@
           </div>
       </div>
     </section>
+    <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
     <script>
         var $burguerButton = document.getElementById("burguer-button");
         var $menu = document.getElementById("menu");
@@ -79,6 +79,21 @@
         function toggleMenu() {
           $menu.classList.toggle('active');
         }
+
+        function showMenu() {
+          $menu.classList.add('active');
+        }
+
+        function hideMenu() {
+          $menu.classList.remove('active');
+        }
+
+        //Gestures recognition
+        var $body = document.body;
+
+        var gestures = new Hammer($body);
+        gestures.on('swipeleft', hideMenu);
+        gestures.on('swiperight', showMenu);
 
     </script>
     <script type="text/javascript">
@@ -96,17 +111,7 @@
             s.parentNode.insertBefore(wf, s);
         })();
     </script>
-    <script>
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/osc.css" />
     <!-- <link rel="stylesheet" href="css/w3.css" /> -->
