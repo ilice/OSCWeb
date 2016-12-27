@@ -312,11 +312,17 @@ header a:hover {
     margin: auto;
     padding: 60px 0 60px 0;
     max-width: 86%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .section-profile h2, .section-profile p {
     font-weight: lighter;
     margin: 0;
+}
+
+.column {
+  width: 100%;
 }
 
 .icon-row{
@@ -426,6 +432,24 @@ header a:hover {
     .burguer-button {
         display: none;
     }
+
+    .section-profile{
+      font-size: 21px;
+    }
+
+    .section-profile h2{
+      font-size: 42px;
+    }
+
+    .column{
+      max-width: 50%;
+    }
+
+    .section-profile .column:last-of-type{
+      display: flex;
+      align-items: center;
+    }
+
 }
 
 @media screen and (max-width: 1024px) {
