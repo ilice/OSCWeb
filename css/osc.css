@@ -1,85 +1,89 @@
 /*Open Smart Country Icon Font*/
 
 @font-face {
-  font-family: 'oscIconFont';
-  src:  url('../fonts/oscIconFont.eot?dz46q4');
-  src:  url('../fonts/oscIconFont.eot?dz46q4#iefix') format('embedded-opentype'),
-    url('../fonts/oscIconFont.ttf?dz46q4') format('truetype'),
-    url('../fonts/oscIconFont.woff?dz46q4') format('woff'),
-    url('../fonts/oscIconFont.svg?dz46q4#oscIconFont') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'oscIconFont';
+    src: url('../fonts/oscIconFont.eot?dz46q4');
+    src: url('../fonts/oscIconFont.eot?dz46q4#iefix') format('embedded-opentype'), url('../fonts/oscIconFont.ttf?dz46q4') format('truetype'), url('../fonts/oscIconFont.woff?dz46q4') format('woff'), url('../fonts/oscIconFont.svg?dz46q4#oscIconFont') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'oscIconFont' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'oscIconFont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-close:before {
-  content: "\ea0f";
+    content: "\ea0f";
 }
+
 .icon-github:before {
-  content: "\eab0";
+    content: "\eab0";
 }
+
 .icon-twitter:before {
-  content: "\ea96";
+    content: "\ea96";
 }
+
 .icon-facebook:before {
-  content: "\ea90";
+    content: "\ea90";
 }
+
 .icon-facebook2:before {
-  content: "\ea91";
+    content: "\ea91";
 }
+
 .icon-menu:before {
-  content: "\e9be";
+    content: "\e9be";
 }
+
 .icon-ocs:before {
-  content: "\6f";
+    content: "\6f";
 }
+
 .icon-osc-filled:before {
-  content: "\73";
+    content: "\73";
 }
+
 .icon-osc-bold:before {
-  content: "\4f";
+    content: "\4f";
 }
+
 .icon-osc-bold-filled:before {
-  content: "\53";
+    content: "\53";
 }
+
 .icon-osc-icon-inner:before {
-  content: "\63";
+    content: "\63";
 }
+
 .icon-down:before {
-  content: "\e900";
+    content: "\e900";
 }
+
 
 /*Open Smart Country Icon Font*/
 
-
-body,
-html
-{
-    font-family: 'open sans',arial,sans-serif;
+body, html {
+    font-family: 'open sans', arial, sans-serif;
     font-size: 16px;
-
+    color: rgb(76, 76, 76);
+    font-weight: lighter;
     height: 100%;
     margin: 0;
-
     -webkit-font-smoothing: antialiased;
 }
 
-header
-{
+header {
     color: grey;
     background-color: white;
     display: block;
@@ -87,149 +91,125 @@ header
     width: 100%;
 }
 
-header figure
-{
+header figure {
     position: absolute;
     display: inline-block;
-    float:left;
+    float: left;
     margin: 0;
 }
 
-.icon-logo, .burguer-button{
-  padding: 20px 24px 20px 20px;
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-  font-size: 30px;
+.icon-logo, .burguer-button {
+    padding: 20px 24px 20px 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 30px;
 }
 
-.menu
-{
+.menu {
     float: right;
     display: block;
 }
 
-.menu ul{
-  margin: 0;
+.menu ul {
+    margin: 0;
 }
 
-.menu li
-{
+.menu li {
     display: inline-block;
 }
 
-.menu a
-{
+.menu a {
     text-decoration: none;
     display: inline-block;
     color: inherit;
     padding: 24px;
 }
 
-header a:hover
-{
+header a:hover {
     color: white;
     background-color: #cfcfcf;
 }
 
-
-
-.menu a.go-to-osc{
-  background-color: rgb(67, 134, 252);
-  color: #fff;
-  cursor: auto;
+.menu a.go-to-osc {
+    background-color: rgb(67, 134, 252);
+    color: #fff;
+    cursor: auto;
 }
 
-.menu a.go-to-osc:hover{
-  background-color: rgb(34, 99, 214);
+.menu a.go-to-osc:hover {
+    background-color: rgb(34, 99, 214);
 }
 
-.burguer-button{
-  position: absolute;
-  right: 0;
-  cursor: pointer;
+.burguer-button {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
 }
 
-
-.landing
-{
+.landing {
     height: 100%;
 }
 
-.flex-container
-{
+.flex-container {
     display: flex;
-
     text-align: center;
-
     justify-content: center;
     align-items: center;
 }
 
-.logo
-{
+.logo {
     font-size: 77px;
-
     display: inline-block;
-
     margin-bottom: 16px;
-
     color: white;
 }
 
-.title
-{
+.title {
     font-size: 60px;
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
-
     margin: 0;
-
     color: white;
-    text-shadow: 0 2px 3px rgba(0,0,0,.4);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, .4);
 }
 
-.button
-{
+.button {
     font-weight: 600;
-
     margin-top: 30px;
     padding: 16px 26px 16px 26px;
-
     cursor: pointer;
     text-align: center;
-
     color: rgb(255, 255, 255);
     border: none;
     background-color: rgb(67, 134, 252);
     text-shadow: rgba(0, 0, 0, .0784314) 0 -1px 0;
 }
 
-.button:hover
-{
+.button:hover {
     background-color: rgb(34, 99, 214);
 }
 
-.arrow-hint{
-  position: absolute;
-  bottom: 0;
-  display: inline-block;
+.arrow-hint {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
 }
 
-.arrow-hint a{
-  text-decoration: none;
-  color: white;
-  font-size: 34px;
+.arrow-hint a {
+    text-decoration: none;
+    color: white;
+    font-size: 34px;
 }
 
 .arrow-hint div:last-of-type {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.animated-arrow-1{
-  -webkit-animation: arrow1 3s infinite ease-out;
-  animation: arrow1 3s infinite ease-out;
+.animated-arrow-1 {
+    -webkit-animation: arrow1 3s infinite ease-out;
+    animation: arrow1 3s infinite ease-out;
 }
 
 @-webkit-keyframes arrow1 {
@@ -238,13 +218,11 @@ header a:hover
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0)
     }
-
     90% {
         opacity: 0;
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0)
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translate(0, 36px);
@@ -259,14 +237,12 @@ header a:hover
         -ms-transform: translate(0, 0);
         transform: translate(0, 0)
     }
-
     90% {
         opacity: 0;
         -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         transform: translate(0, 0)
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translate(0, 36px);
@@ -275,9 +251,9 @@ header a:hover
     }
 }
 
-.animated-arrow-2{
-  -webkit-animation: arrow2 3s infinite ease-in;
-  animation: arrow2 3s infinite ease-in;
+.animated-arrow-2 {
+    -webkit-animation: arrow2 3s infinite ease-in;
+    animation: arrow2 3s infinite ease-in;
 }
 
 @-webkit-keyframes arrow2 {
@@ -286,13 +262,11 @@ header a:hover
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0)
     }
-
     90% {
         opacity: 1;
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0)
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate(0, 36px);
@@ -307,14 +281,12 @@ header a:hover
         -ms-transform: translate(0, 0);
         transform: translate(0, 0)
     }
-
     90% {
         opacity: 1;
         -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         transform: translate(0, 0)
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate(0, 36px);
@@ -323,136 +295,159 @@ header a:hover
     }
 }
 
+
 /* Android UI guidelines https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately*/
-.recomended-min-button-size
-{
+
+.recomended-min-button-size {
     min-width: 47px;
     min-height: 47px;
 }
 
+.content-wrapper {
+    background-color: white;
+    text-align: center;
+}
 
+.section-profile {
+    margin: auto;
+    padding: 60px 0 60px 0;
+    max-width: 86%;
+}
 
+.section-profile h2, .section-profile p {
+    font-weight: lighter;
+    margin: 0;
+}
 
+.icon-row{
+  margin-bottom: 25px;
+}
+.section-profile .material-icons{
+  padding: 15px 8px 15px 8px;
+  margin-right: 20px;
+}
 
-@media screen and (max-width: 320px)
-{
-    .landing-background
-    {
+.icon-row .material-icons:last-of-type{
+  margin-right: 0;
+}
+
+.material-icons.md-70 {
+    font-size: 70px;
+}
+
+.material-icons.blue600 {
+    color: rgb(255, 255, 255);
+    background: #3980FB;
+}
+
+.material-icons.red600 {
+    color: rgb(255, 255, 255);
+    background: #DF4430
+}
+
+.material-icons.green600 {
+    color: rgb(255, 255, 255);
+    background: #029D54
+}
+
+.material-icons.yelow600 {
+    color: rgb(255, 255, 255);
+    background: #F6B502
+}
+
+.material-icons.magenta600 {
+    color: rgb(255, 255, 255);
+    background: #CC338E
+}
+
+@media screen and (max-width: 320px) {
+    .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_320.jpg');
     }
 }
 
-@media screen and (max-width: 768px)
-{
-    .landing-background
-    {
+@media screen and (max-width: 768px) {
+    .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_768.jpg');
     }
-
-    .title
-    {
+    .title {
         font-size: 36px;
         font-weight: 300;
         line-height: 1.29;
-
         color: #fff;
-        text-shadow: 0 2px 3px rgba(0,0,0,.4);
+        text-shadow: 0 2px 3px rgba(0, 0, 0, .4);
     }
-
     .header {
-      position: static;
+        position: static;
     }
-
     .menu {
-      text-align: center;
-      color: #66a0fd;
-      position: absolute;
-      left: -100%;
-      top: 0;
-      bottom: 0;
-      background-color: rgba(255, 255, 255, 1);
-      display: flex;
-      align-items: center;
-      width: 100%;
-      transition: 300ms;
+        text-align: center;
+        color: #66a0fd;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        align-items: center;
+        width: 100%;
+        transition: 300ms;
     }
-
-    .menu.active{
-      left: 0;
+    .menu.active {
+        left: 0;
     }
-
-    .menu ul{
-      padding: 0;
-      margin-bottom: 24px;
+    .menu ul {
+        padding: 0;
+        margin-bottom: 24px;
     }
-
-    .menu li{
-      width: 100%;
+    .menu li {
+        width: 100%;
     }
-
-    .menu a.go-to-osc{
-      border: 1px solid #66a0fd;
-      background-color: white;
-      color: inherit;
+    .menu a.go-to-osc {
+        border: 1px solid #66a0fd;
+        background-color: white;
+        color: inherit;
     }
-
-    .hide-small
-    {
+    .hide-small {
         display: none;
     }
-
-    .button
-    {
+    .button {
         font-size: 12px;
     }
-
-    .logo
-    {
+    .logo {
         font-size: 60px;
     }
-
 }
 
-@media screen and (min-width:768px)
-{
-    .hide-large
-    {
+@media screen and (min-width:768px) {
+    .hide-large {
         display: none;
     }
-
-    .burguer-button{
-      display: none;
+    .burguer-button {
+        display: none;
     }
 }
 
-@media screen and (max-width: 1024px)
-{
-    .landing-background
-    {
+@media screen and (max-width: 1024px) {
+    .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1024.jpg');
     }
 }
 
-@media screen and (max-width: 1200px)
-{
-    .landing-background
-    {
+@media screen and (max-width: 1200px) {
+    .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1200.jpg');
     }
 }
 
-@media screen and (max-width: 1600px)
-{
-    .landing-background
-    {
+@media screen and (max-width: 1600px) {
+    .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1600.jpg');
     }
 }
 
-@media screen and (min-width: 1600px)
-{
-    .landing-background
-    {
+@media screen and (min-width: 1600px) {
+    .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_4256x2832.jpg');
     }
 }
