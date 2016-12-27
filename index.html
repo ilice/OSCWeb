@@ -69,13 +69,47 @@
               <button class="button recomended-min-button-size" onclick="location.href='/propietario'">Ir a Open Smart Country</button>
           </div>
           <div class="arrow-hint">
-            <a href="#">
+            <a href="#start">
               <div class="icon-down animated-arrow-1"></div>
-              <div class="icon-down animated-arrow-2">  </div>        
+              <div class="icon-down animated-arrow-2">  </div>
             </a>
           </div>
       </div>
     </section>
+
+    <div id="start" class="content-wrapper">
+      <!-- Public profile -->
+      <section class="section-profile">
+
+        <!-- Location icons -->
+        <div>
+          <div class="icon-row">
+            <i class="material-icons md-70 blue600">add_location</i>
+            <i class="material-icons md-70 green600">edit_location</i>
+            <i class="material-icons md-70 yelow600">pin_drop</i>
+          </div>
+          <div class="icon-row">
+            <i class="material-icons md-70 yelow600">map</i>
+            <i class="material-icons md-70 magenta600">beenhere</i>
+            <i class="material-icons md-70 blue600">place</i>
+          </div>
+          <div class="icon-row">
+            <i class="material-icons md-70 red600">satellite</i>
+            <i class="material-icons md-70 blue600">layers</i>
+            <i class="material-icons md-70 green600">local_florist</i>
+          </div>
+        </div>
+
+        <!-- Profile text -->
+        <div>
+          <h2>Pon tu parcela online</h2>
+          <p>
+            OSC te ofrece un perfil de tu parcela gratuito. Pon tu parcela online, hoy si algo no está en internet no existe. Añade información de interés y comparte en tus redes sociales.
+          </p>
+        </div>
+      </section>
+    </div>
+
     <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
     <script>
         var $burguerButton = document.getElementById("burguer-button");
@@ -105,7 +139,7 @@
     <script type="text/javascript">
         WebFontConfig = {
             google: {
-                families: ['Open+Sans:300,400,600:latin']
+                families: ['Open+Sans:300,400,600:latin', 'Material+Icons']
             }
         };
         (function() {
@@ -118,7 +152,6 @@
         })();
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/osc.css" />
     <!-- <link rel="stylesheet" href="css/w3.css" /> -->
 </body>
