@@ -316,7 +316,7 @@ header a:hover {
     flex-wrap: wrap;
 }
 
-.section-global{
+.section-everywhere{
   flex-wrap: wrap-reverse;
 }
 
@@ -370,7 +370,22 @@ header a:hover {
     background: #CC338E
 }
 
-.section-global .material-icons{
+.photo-wrapper {
+    height: 500px;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.everywhere-photo{
+  background-image: url('../images/cies-islands-1341434.jpg');
+  background-position: center bottom;
+  background-size: cover;
+  height: 300px;
+}
+
+.section-everywhere .material-icons{
   font-size: 220px;
 }
 
@@ -430,6 +445,10 @@ header a:hover {
     }
     .logo {
         font-size: 60px;
+    }
+
+    .photo-wrapper {
+        height:300px
     }
 }
 
