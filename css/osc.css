@@ -93,6 +93,7 @@ header {
     display: block;
     position: fixed;
     width: 100%;
+    z-index: 300;
 }
 
 header figure {
@@ -443,6 +444,33 @@ header a:hover {
    color: rgb(64, 64, 64);
  }
 
+ footer{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: white;
+
+
+   box-shadow: 0 -2px 38px rgba(0,0,0,0.30);
+ }
+
+ footer a{
+   color: inherit;
+   text-decoration: none;
+   margin-left: 10px;
+ }
+
+ footer div{
+   margin-right: 10px;
+   display: flex;
+   justify-content: flex-end;
+   flex-wrap: wrap;
+ }
+
+ footer .material-icons{
+   font-size: 16px;
+ }
+
 
 
 @media screen and (max-width: 320px) {
@@ -460,6 +488,10 @@ header a:hover {
 
     .final-photo{
       background-image: url('../images/dandelion-437827_320.jpg');
+    }
+
+    footer, footer .material-icons {
+      font-size: 12px;
     }
 }
 
@@ -489,7 +521,6 @@ header a:hover {
     }
     .header {
         color: lightgrey;
-        z-index: 1;
     }
     .menu {
         text-align: center;
