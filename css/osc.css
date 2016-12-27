@@ -211,6 +211,117 @@ header a:hover
     background-color: rgb(34, 99, 214);
 }
 
+.arrow-hint{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.arrow-hint a{
+  text-decoration: none;
+  color: white;
+  font-size: 34px;
+}
+
+.arrow-hint div:last-of-type {
+  margin-bottom: 20px;
+}
+
+.animated-arrow-1{
+  -webkit-animation: arrow1 3s infinite ease-out;
+  animation: arrow1 3s infinite ease-out;
+}
+
+@-webkit-keyframes arrow1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    90% {
+        opacity: 0;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0, 36px);
+        transform: translate(0, 36px)
+    }
+}
+
+@keyframes arrow1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    90% {
+        opacity: 0;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(0, 36px);
+        -ms-transform: translate(0, 36px);
+        transform: translate(0, 36px)
+    }
+}
+
+.animated-arrow-2{
+  -webkit-animation: arrow2 3s infinite ease-in;
+  animation: arrow2 3s infinite ease-in;
+}
+
+@-webkit-keyframes arrow2 {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    90% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, 36px);
+        transform: translate(0, 36px)
+    }
+}
+
+@keyframes arrow2 {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    90% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, 36px);
+        -ms-transform: translate(0, 36px);
+        transform: translate(0, 36px)
+    }
+}
 
 /* Android UI guidelines https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately*/
 .recomended-min-button-size
