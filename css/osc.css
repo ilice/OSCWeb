@@ -490,6 +490,7 @@ header a:hover {
     .header {
         position: static;
         color: lightgrey;
+        z-index: 1;
     }
     .menu {
         text-align: center;
