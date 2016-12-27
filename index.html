@@ -195,7 +195,7 @@
     </footer>
 
     <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
-    <script>
+    <script type="text/javascript">
         var $burguerButton = document.getElementById("burguer-button");
         var $menu = document.getElementById("menu");
         $burguerButton.addEventListener('click', toggleMenu);
@@ -219,8 +219,8 @@
         var gestures = new Hammer($body);
         gestures.on('swipeleft', hideMenu);
         gestures.on('swiperight', showMenu);
-    </script>
-    <script type="text/javascript">
+
+        //Async font
         WebFontConfig = {
             google: {
                 families: ['Open+Sans:300,400,600:latin', 'Material+Icons']
@@ -237,7 +237,6 @@
     </script>
 
     <link rel="stylesheet" href="css/osc.css" />
-    <!-- <link rel="stylesheet" href="css/w3.css" /> -->
 </body>
 
 </html>
