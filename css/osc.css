@@ -379,7 +379,6 @@ header a:hover {
 }
 
 .everywhere-photo{
-  background-image: url('../images/cies-islands-1341434.jpg');
   background-position: center bottom;
   background-size: cover;
   height: 100%;
@@ -393,11 +392,19 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_320.jpg');
     }
+
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_320.jpg');
+    }
 }
 
 @media screen and (max-width: 768px) {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_768.jpg');
+    }
+
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_768.jpg');
     }
     .title {
         font-size: 36px;
@@ -485,11 +492,17 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1024.jpg');
     }
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_1024.jpg');
+    }
 }
 
 @media screen and (max-width: 1200px) {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1200.jpg');
+    }
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_1200.jpg');
     }
 }
 
@@ -497,10 +510,16 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1600.jpg');
     }
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_1600.jpg');
+    }
 }
 
 @media screen and (min-width: 1600px) {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_4256x2832.jpg');
+    }
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_3264x2448.jpg');
     }
 }
