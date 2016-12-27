@@ -488,14 +488,13 @@ header a:hover {
         text-shadow: 0 2px 3px rgba(0, 0, 0, .4);
     }
     .header {
-        position: static;
         color: lightgrey;
         z-index: 1;
     }
     .menu {
         text-align: center;
         color: #66a0fd;
-        position: absolute;
+        position: fixed;
         left: -100%;
         top: 0;
         bottom: 0;
