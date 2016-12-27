@@ -214,7 +214,7 @@ header a:hover
 .arrow-hint{
   position: absolute;
   bottom: 0;
-  width: 100%;
+  display: inline-block;
 }
 
 .arrow-hint a{
