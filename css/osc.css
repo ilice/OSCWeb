@@ -1,75 +1,79 @@
 /*Open Smart Country Icon Font*/
 
 @font-face {
-    font-family: 'oscIconFont';
-    src: url('../fonts/oscIconFont.eot?dz46q4');
-    src: url('../fonts/oscIconFont.eot?dz46q4#iefix') format('embedded-opentype'), url('../fonts/oscIconFont.ttf?dz46q4') format('truetype'), url('../fonts/oscIconFont.woff?dz46q4') format('woff'), url('../fonts/oscIconFont.svg?dz46q4#oscIconFont') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'oscIconFont';
+  src:  url('../fonts/oscIconFont.eot?dxisic');
+  src:  url('../fonts/oscIconFont.eot?dxisic#iefix') format('embedded-opentype'),
+    url('../fonts/oscIconFont.ttf?dxisic') format('truetype'),
+    url('../fonts/oscIconFont.woff?dxisic') format('woff'),
+    url('../fonts/oscIconFont.svg?dxisic#oscIconFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'oscIconFont' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'oscIconFont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-file-pdf:before {
+  content: "\eadf";
+}
+.icon-envelope:before {
+  content: "\e901";
+}
+.icon-whatsapp2:before {
+  content: "\ea94";
+}
 .icon-close:before {
-    content: "\ea0f";
+  content: "\ea0f";
 }
-
 .icon-github:before {
-    content: "\eab0";
+  content: "\eab0";
 }
-
 .icon-twitter:before {
-    content: "\ea96";
+  content: "\ea96";
 }
-
 .icon-facebook:before {
-    content: "\ea90";
+  content: "\ea90";
 }
-
 .icon-facebook2:before {
-    content: "\ea91";
+  content: "\ea91";
 }
-
 .icon-menu:before {
-    content: "\e9be";
+  content: "\e9be";
 }
-
 .icon-ocs:before {
-    content: "\6f";
+  content: "\6f";
 }
-
 .icon-osc-filled:before {
-    content: "\73";
+  content: "\73";
 }
-
 .icon-osc-bold:before {
-    content: "\4f";
+  content: "\4f";
 }
-
 .icon-osc-bold-filled:before {
-    content: "\53";
+  content: "\53";
 }
-
 .icon-osc-icon-inner:before {
-    content: "\63";
+  content: "\63";
 }
-
 .icon-down:before {
-    content: "\e900";
+  content: "\e900";
 }
-
 
 /*Open Smart Country Icon Font*/
 
@@ -84,7 +88,7 @@ body, html {
 }
 
 header {
-    color: lightgrey;
+    color: grey;
     background-color: white;
     display: block;
     position: fixed;
@@ -312,11 +316,15 @@ header a:hover {
     margin: auto;
     padding: 60px 0 60px 0;
     max-width: 86%;
-    display: flex;
-    flex-wrap: wrap;
+
 }
 
-.section-global{
+.section-profile, .section-everywhere{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-everywhere{
   flex-wrap: wrap-reverse;
 }
 
@@ -370,13 +378,88 @@ header a:hover {
     background: #CC338E
 }
 
-.section-global .material-icons{
+.photo-wrapper {
+    height: 500px;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.everywhere-photo, .share-photo, .final-photo{
+  background-position: center bottom;
+  background-size: cover;
+  height: 100%;
+}
+
+.section-everywhere .material-icons{
   font-size: 220px;
 }
+.section-share{
+  max-width: 70%;
+}
+.section-share i{
+  font-size: 40px;
+}
+
+.section-share .icon-facebook {
+    color: #3b5998;
+}
+.section-share .icon-twitter {
+  color: #1DA1F2 ;
+ }
+
+ .section-share .icon-whatsapp{
+   color: #25D366;
+ }
+
+ .section-share .icon-file-pdf{
+   color: #DB290F;
+ }
+
+ .section-share .share-icons{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+ }
+ .section-share .material-icons{
+   color: rgba(255, 255, 255, 1);
+   background-color: grey;
+   border-radius: 50%;
+   padding: 10px;
+   margin: 0;
+   font-size: 30px;
+ }
+
+ .section-final h1{
+   font-weight: lighter;
+   color: rgb(64, 64, 64);
+   max-width: 80%;
+   text-align: center;
+   margin: auto;
+ }
+
+ .section-final .logo{
+   color: rgb(64, 64, 64);
+ }
+
+
 
 @media screen and (max-width: 320px) {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_320.jpg');
+    }
+
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_320.jpg');
+    }
+
+    .share-photo{
+      background-image: url('../images/bike-1087222_320.jpg');
+    }
+
+    .final-photo{
+      background-image: url('../images/dandelion-437827_320.jpg');
     }
 }
 
@@ -384,6 +467,19 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_768.jpg');
     }
+
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_768.jpg');
+    }
+
+    .share-photo{
+      background-image: url('../images/bike-1087222_768.jpg');
+    }
+
+    .final-photo{
+      background-image: url('../images/dandelion-437827_768.jpg');
+    }
+
     .title {
         font-size: 36px;
         font-weight: 300;
@@ -393,6 +489,7 @@ header a:hover {
     }
     .header {
         position: static;
+        color: lightgrey;
     }
     .menu {
         text-align: center;
@@ -431,6 +528,14 @@ header a:hover {
     .logo {
         font-size: 60px;
     }
+
+    .photo-wrapper {
+        height:300px
+    }
+
+    .section-share{
+      max-width: 90%;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -449,7 +554,7 @@ header a:hover {
       font-size: 42px;
     }
 
-    .column{
+    .section-profile .column, .section-everywhere .column{
       max-width: 50%;
     }
 
@@ -465,11 +570,30 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1024.jpg');
     }
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_1024.jpg');
+    }
+    .share-photo{
+      background-image: url('../images/bike-1087222_1024.jpg');
+    }
+
+    .final-photo{
+      background-image: url('../images/dandelion-437827_1024.jpg');
+    }
 }
 
 @media screen and (max-width: 1200px) {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1200.jpg');
+    }
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_1200.jpg');
+    }
+    .share-photo{
+      background-image: url('../images/bike-1087222_1200.jpg');
+    }
+    .final-photo{
+      background-image: url('../images/dandelion-437827_1200.jpg');
     }
 }
 
@@ -477,10 +601,28 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1600.jpg');
     }
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_1600.jpg');
+    }
+    .share-photo{
+      background-image: url('../images/bike-1087222_1600.jpg');
+    }
+    .final-photo{
+      background-image: url('../images/dandelion-437827_1600.jpg');
+    }
 }
 
 @media screen and (min-width: 1600px) {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_4256x2832.jpg');
+    }
+    .everywhere-photo{
+      background-image: url('../images/cies-islands-1341434_3264x2448.jpg');
+    }
+    .share-photo{
+      background-image: url('../images/bike-1087222_4608x3456.jpg');
+    }
+    .final-photo{
+      background-image: url('../images/dandelion-437827_5184x3888.jpg');
     }
 }
