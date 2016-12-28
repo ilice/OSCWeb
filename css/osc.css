@@ -1,79 +1,91 @@
 /*Open Smart Country Icon Font*/
 
 @font-face {
-  font-family: 'oscIconFont';
-  src:  url('../fonts/oscIconFont.eot?dxisic');
-  src:  url('../fonts/oscIconFont.eot?dxisic#iefix') format('embedded-opentype'),
-    url('../fonts/oscIconFont.ttf?dxisic') format('truetype'),
-    url('../fonts/oscIconFont.woff?dxisic') format('woff'),
-    url('../fonts/oscIconFont.svg?dxisic#oscIconFont') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'oscIconFont';
+    src: url('../fonts/oscIconFont.eot?dxisic');
+    src: url('../fonts/oscIconFont.eot?dxisic#iefix') format('embedded-opentype'), url('../fonts/oscIconFont.ttf?dxisic') format('truetype'), url('../fonts/oscIconFont.woff?dxisic') format('woff'), url('../fonts/oscIconFont.svg?dxisic#oscIconFont') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'oscIconFont' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'oscIconFont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-whatsapp:before {
-  content: "\ea93";
+    content: "\ea93";
 }
+
 .icon-file-pdf:before {
-  content: "\eadf";
+    content: "\eadf";
 }
+
 .icon-envelope:before {
-  content: "\e901";
+    content: "\e901";
 }
+
 .icon-whatsapp2:before {
-  content: "\ea94";
+    content: "\ea94";
 }
+
 .icon-close:before {
-  content: "\ea0f";
+    content: "\ea0f";
 }
+
 .icon-github:before {
-  content: "\eab0";
+    content: "\eab0";
 }
+
 .icon-twitter:before {
-  content: "\ea96";
+    content: "\ea96";
 }
+
 .icon-facebook:before {
-  content: "\ea90";
+    content: "\ea90";
 }
+
 .icon-facebook2:before {
-  content: "\ea91";
+    content: "\ea91";
 }
+
 .icon-menu:before {
-  content: "\e9be";
+    content: "\e9be";
 }
+
 .icon-ocs:before {
-  content: "\6f";
+    content: "\6f";
 }
+
 .icon-osc-filled:before {
-  content: "\73";
+    content: "\73";
 }
+
 .icon-osc-bold:before {
-  content: "\4f";
+    content: "\4f";
 }
+
 .icon-osc-bold-filled:before {
-  content: "\53";
+    content: "\53";
 }
+
 .icon-osc-icon-inner:before {
-  content: "\63";
+    content: "\63";
 }
+
 .icon-down:before {
-  content: "\e900";
+    content: "\e900";
 }
+
 
 /*Open Smart Country Icon Font*/
 
@@ -317,16 +329,15 @@ header a:hover {
     margin: auto;
     padding: 60px 0 60px 0;
     max-width: 86%;
-
 }
 
-.section-profile, .section-everywhere{
-  display: flex;
-  flex-wrap: wrap;
+.section-profile, .section-everywhere {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.section-everywhere{
-  flex-wrap: wrap-reverse;
+.section-everywhere {
+    flex-wrap: wrap-reverse;
 }
 
 .section h2, .section p {
@@ -335,19 +346,20 @@ header a:hover {
 }
 
 .column {
-  width: 100%;
+    width: 100%;
 }
 
-.icon-row{
-  margin-bottom: 25px;
-}
-.section .material-icons{
-  padding: 15px 8px 15px 8px;
-  margin-right: 20px;
+.icon-row {
+    margin-bottom: 25px;
 }
 
-.icon-row .material-icons:last-of-type{
-  margin-right: 0;
+.section .material-icons {
+    padding: 15px 8px 15px 8px;
+    margin-right: 20px;
+}
+
+.icon-row .material-icons:last-of-type {
+    margin-right: 0;
 }
 
 .material-icons.md-70 {
@@ -387,111 +399,117 @@ header a:hover {
     transform: translate3d(0, 0, 0)
 }
 
-.everywhere-photo, .share-photo, .final-photo{
-  background-position: center bottom;
-  background-size: cover;
-  height: 100%;
+.everywhere-photo, .share-photo, .final-photo {
+    background-position: center bottom;
+    background-size: cover;
+    height: 100%;
 }
 
-.section-everywhere .material-icons{
-  font-size: 220px;
+.section-everywhere .material-icons {
+    font-size: 220px;
 }
-.section-share{
-  max-width: 70%;
+
+.section-share {
+    max-width: 70%;
 }
-.section-share i{
-  font-size: 40px;
+
+.section-share i {
+    font-size: 40px;
 }
 
 .section-share .icon-facebook {
     color: #3b5998;
 }
+
 .section-share .icon-twitter {
-  color: #1DA1F2 ;
- }
+    color: #1DA1F2;
+}
 
- .section-share .icon-whatsapp{
-   color: #25D366;
- }
+.section-share .icon-whatsapp {
+    color: #25D366;
+}
 
- .section-share .icon-file-pdf{
-   color: #DB290F;
- }
+.section-share .icon-file-pdf {
+    color: #DB290F;
+}
 
- .section-share .share-icons{
-   display: flex;
-   justify-content: space-between;
-   margin-bottom: 20px;
- }
- .section-share .material-icons{
-   color: rgba(255, 255, 255, 1);
-   background-color: grey;
-   border-radius: 50%;
-   padding: 10px;
-   margin: 0;
-   font-size: 30px;
- }
+.section-share .share-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
- .section-final h1{
-   font-weight: lighter;
-   color: rgb(64, 64, 64);
-   max-width: 80%;
-   text-align: center;
-   margin: auto;
- }
+.section-share .material-icons {
+    color: rgba(255, 255, 255, 1);
+    background-color: grey;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0;
+    font-size: 30px;
+}
 
- .section-final .logo{
-   color: rgb(64, 64, 64);
- }
+.section-final h1 {
+    font-weight: lighter;
+    color: rgb(64, 64, 64);
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
+}
 
- footer{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   background-color: white;
+.section-final .logo {
+    color: rgb(64, 64, 64);
+}
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 -2px 38px rgba(0, 0, 0, 0.30);
+}
 
-   box-shadow: 0 -2px 38px rgba(0,0,0,0.30);
- }
+footer a {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 10px;
+}
 
- footer a{
-   color: inherit;
-   text-decoration: none;
-   margin-left: 10px;
- }
+footer div {
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
 
- footer div{
-   margin-right: 10px;
-   display: flex;
-   justify-content: flex-end;
-   flex-wrap: wrap;
- }
-
- footer .material-icons{
-   font-size: 16px;
- }
-
-
+footer .material-icons {
+    font-size: 16px;
+}
 
 @media screen and (max-width: 320px) {
+    /*Mobile S*/
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_320.jpg');
     }
-
-    .everywhere-photo{
-      background-image: url('../images/cies-islands-1341434_320.jpg');
+    .everywhere-photo {
+        background-image: url('../images/cies-islands-1341434_320.jpg');
     }
-
-    .share-photo{
-      background-image: url('../images/bike-1087222_320.jpg');
+    .share-photo {
+        background-image: url('../images/bike-1087222_320.jpg');
     }
-
-    .final-photo{
-      background-image: url('../images/dandelion-437827_320.jpg');
+    .final-photo {
+        background-image: url('../images/dandelion-437827_320.jpg');
     }
-
     footer, footer .material-icons {
-      font-size: 12px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    /*Mobile M*/
+    .section .material-icons {
+        padding: 15px 8px 15px 8px;
+        margin-right: 15px;
+        font-size: 50px;
     }
 }
 
@@ -499,19 +517,15 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_768.jpg');
     }
-
-    .everywhere-photo{
-      background-image: url('../images/cies-islands-1341434_768.jpg');
+    .everywhere-photo {
+        background-image: url('../images/cies-islands-1341434_768.jpg');
     }
-
-    .share-photo{
-      background-image: url('../images/bike-1087222_768.jpg');
+    .share-photo {
+        background-image: url('../images/bike-1087222_768.jpg');
     }
-
-    .final-photo{
-      background-image: url('../images/dandelion-437827_768.jpg');
+    .final-photo {
+        background-image: url('../images/dandelion-437827_768.jpg');
     }
-
     .title {
         font-size: 36px;
         font-weight: 300;
@@ -559,13 +573,11 @@ header a:hover {
     .logo {
         font-size: 60px;
     }
-
     .photo-wrapper {
-        height:300px
+        height: 300px
     }
-
-    .section-share{
-      max-width: 90%;
+    .section-share {
+        max-width: 90%;
     }
 }
 
@@ -576,40 +588,34 @@ header a:hover {
     .burguer-button {
         display: none;
     }
-
-    .section{
-      font-size: 21px;
+    .section {
+        font-size: 21px;
     }
-
-    .section h2{
-      font-size: 42px;
+    .section h2 {
+        font-size: 42px;
     }
-
-    .section-profile .column, .section-everywhere .column{
-      max-width: 50%;
+    .section-profile .column, .section-everywhere .column {
+        max-width: 50%;
     }
-
-    .section .column:last-of-type{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .section .column:last-of-type {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-
 }
 
 @media screen and (max-width: 1024px) {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1024.jpg');
     }
-    .everywhere-photo{
-      background-image: url('../images/cies-islands-1341434_1024.jpg');
+    .everywhere-photo {
+        background-image: url('../images/cies-islands-1341434_1024.jpg');
     }
-    .share-photo{
-      background-image: url('../images/bike-1087222_1024.jpg');
+    .share-photo {
+        background-image: url('../images/bike-1087222_1024.jpg');
     }
-
-    .final-photo{
-      background-image: url('../images/dandelion-437827_1024.jpg');
+    .final-photo {
+        background-image: url('../images/dandelion-437827_1024.jpg');
     }
 }
 
@@ -617,14 +623,14 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1200.jpg');
     }
-    .everywhere-photo{
-      background-image: url('../images/cies-islands-1341434_1200.jpg');
+    .everywhere-photo {
+        background-image: url('../images/cies-islands-1341434_1200.jpg');
     }
-    .share-photo{
-      background-image: url('../images/bike-1087222_1200.jpg');
+    .share-photo {
+        background-image: url('../images/bike-1087222_1200.jpg');
     }
-    .final-photo{
-      background-image: url('../images/dandelion-437827_1200.jpg');
+    .final-photo {
+        background-image: url('../images/dandelion-437827_1200.jpg');
     }
 }
 
@@ -632,14 +638,14 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_1600.jpg');
     }
-    .everywhere-photo{
-      background-image: url('../images/cies-islands-1341434_1600.jpg');
+    .everywhere-photo {
+        background-image: url('../images/cies-islands-1341434_1600.jpg');
     }
-    .share-photo{
-      background-image: url('../images/bike-1087222_1600.jpg');
+    .share-photo {
+        background-image: url('../images/bike-1087222_1600.jpg');
     }
-    .final-photo{
-      background-image: url('../images/dandelion-437827_1600.jpg');
+    .final-photo {
+        background-image: url('../images/dandelion-437827_1600.jpg');
     }
 }
 
@@ -647,13 +653,13 @@ header a:hover {
     .landing-background {
         background-image: url('../images/14469337569_fe1a849240_o_4256x2832.jpg');
     }
-    .everywhere-photo{
-      background-image: url('../images/cies-islands-1341434_3264x2448.jpg');
+    .everywhere-photo {
+        background-image: url('../images/cies-islands-1341434_3264x2448.jpg');
     }
-    .share-photo{
-      background-image: url('../images/bike-1087222_4608x3456.jpg');
+    .share-photo {
+        background-image: url('../images/bike-1087222_4608x3456.jpg');
     }
-    .final-photo{
-      background-image: url('../images/dandelion-437827_5184x3888.jpg');
+    .final-photo {
+        background-image: url('../images/dandelion-437827_5184x3888.jpg');
     }
 }
