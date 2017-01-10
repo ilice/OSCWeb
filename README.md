@@ -8,7 +8,13 @@ Lo primero es instalar todas las librerias necesarias
 $ npm install
 ```
 
-Se puede arrancar un sencillo servidor que abre el navegador y lo deja sincronizado con el código de forma que si modificamos el ódigo, automáticamente se construye lo necesario y se actualiza el navegador.
+La tarea por defecto de gulp se encarga de generar todos los archivos necesarios.
+
+```
+$ gulp
+```
+
+Tras ejecutar la tarea anterior se puede arrancar un sencillo servidor que abre el navegador y lo deja sincronizado con el código de forma que si modificamos el ódigo, automáticamente se construye lo necesario y se actualiza el navegador.
 
 ```
 $ gulp serve
@@ -65,23 +71,27 @@ $ npm install --save-dev  browserify babelify vinyl-source-stream  babel-preset-
 ```
 
 ### [<img src="http://f.cl.ly/items/3i3n001d0s1Q031r2q1P/page.png" alt="pagejs" style="height: 35px;"/>](https://visionmedia.github.io/page.js/)
+
 [pagejs](https://visionmedia.github.io/page.js/) nos permitirá construir la aplicación como una single page, sin recargar cada vez.
+
 ```
 $ npm install --save page
 ```
 
-### [<img src="https://raw.githubusercontent.com/maxogden/yo-yo/master/yoyojs.png" alt="pagejs" style="height: 35px;"/>](https://www.npmjs.com/package/yo-yo)
+### [![pagejs](https://raw.githubusercontent.com/maxogden/yo-yo/master/yoyojs.png)](https://www.npmjs.com/package/yo-yo)
 
 Utilizaremos esta librería [yo-yo](https://www.npmjs.com/package/yo-yo) para ayudarnos mantener el código modularizado al estilo React.
 
 ### Back End
 
 #### python - Servidor
+
 Como servidor utilizaremos a futuro Django, temporalmente utilizaremos [SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) como una forma muy sencilla de empezar, levanta un servidor que sirve el contenido del directorio actual. Para ejecutalo le pasamos el puerto:
 
 ```
 $ python -m SimpleHTTPServer 8000
 ```
+
 En el directorio raiz hay un [ejecutable (startserver.bat)](./startserver.bat) para lanzarlo en windows de manera sencilla.
 
 ## Diseño
