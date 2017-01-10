@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ilice/OSCWeb#readme",
   "dependencies": {
+    "empty-element": "^1.0.0",
     "hammerjs": "^2.0.8",
     "page": "^1.7.1",
     "webfontloader": "^1.6.27",
