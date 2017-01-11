@@ -82,6 +82,10 @@ $ npm install --save page
 
 Utilizaremos esta librería [yo-yo](https://www.npmjs.com/package/yo-yo) para ayudarnos mantener el código modularizado al estilo React.
 
+### [![FormatJS](https://31.media.tumblr.com/d75b6fa3b419f508b9792b2afa8933f2/tumblr_inline_ndg3pbNUWk1t01opa.png)]
+
+Utilizaremos la librería FormatJS para traducir la aplicación y dar soporte en general a los idiomas, además utilizaremos un polifill para safary que no soporta la librería intl.
+
 ### Back End
 
 #### python - Servidor

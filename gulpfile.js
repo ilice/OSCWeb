@@ -53,7 +53,7 @@ gulp.task('serve', function() {
     }
   });
 
-  var watcherJS = gulp.watch('./src/**/*', ['build']);
+  var watcherJS = gulp.watch('./src/**/**/*', ['build']);
   watcherJS.on('change', function(event) {
     console.log('JS File ' + event.path + ' was ' + event.type + ', running tasks...');
   });

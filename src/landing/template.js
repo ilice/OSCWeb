@@ -1,12 +1,13 @@
 var yo = require('yo-yo');
+var translate = require('../translate');
 
 module.exports = yo`<div>
   <section class="landing flex-container landing-background">
     <div>
         <i class="icon-osc-bold logo"></i>
-        <h1 class="title">Tu parcela útil y sostenible</h1>
+        <h1 class="title">${translate.message('landing-claim')}</h1>
         <div>
-            <button class="button recomended-min-button-size" onclick="location.href='/propietario'">Ir a Open Smart Country</button>
+            <button class="button recomended-min-button-size" onclick="location.href='/propietario'">${translate.message('go-to-osc')}</button>
         </div>
         <div class="arrow-hint">
             <a href="#start">
@@ -37,9 +38,9 @@ module.exports = yo`<div>
       </div>
       <div class="column">
         <div>
-          <h2>Pon tu parcela online</h2>
+          <h2>${translate.message('upload-your-plot')}</h2>
           <p>
-            OSC te ofrece un perfil de tu parcela gratuito. Pon tu parcela online, hoy si algo no está en internet no existe. Añade información de interés y comparte en tus redes sociales.
+            ${translate.message('upload-your-plot-explanation')}
           </p>
         </div>
       </div>
@@ -47,12 +48,12 @@ module.exports = yo`<div>
     <div class="photo-wrapper">
       <div class="everywhere-photo"></div>
     </div>
-    <section class="section section-everywhere">
+    <section class="section section-anywhere">
       <div class="column">
         <div>
-          <h2>La información de tu parcela desde cualquier lugar</h2>
+          <h2>${translate.message('anywhere-plot')}</h2>
           <p>
-              Puedes acceder a la información de tu parcela desde cualquier smartphone, tablet u ordenador. Estés dondes estés tu información estará contigo.
+              ${translate.message('anywhere-plot-explanation')}
           </p>
         </div>
       </div>
@@ -76,9 +77,9 @@ module.exports = yo`<div>
             <i class="material-icons">share</i>
         </div>
         <div>
-          <h2>Comparte la información de tu parcela</h2>
+          <h2>${translate.message('share-your-plot')}</h2>
           <p>
-            Puedes enviar fácilmente a otros usuarios la información de tu parcela, también puedes descargar un informe para enviar cómodamente o para incluir junto a otro tipo de información.
+            ${translate.message('share-your-plot-explanation')}
           </p>
         </div>
       </div>
@@ -89,9 +90,9 @@ module.exports = yo`<div>
     <section class="section section-final">
       <div>
         <i class="icon-osc-bold logo"></i>
-        <h1>Empieza a usar Open Smart Country gratis</h1>
+        <h1>${translate.message('get-started')}</h1>
         <div>
-          <button class="button recomended-min-button-size" onclick="location.href='/propietario'">Ir a Open Smart Country</button>
+          <button class="button recomended-min-button-size" onclick="location.href='/propietario'">${translate.message('go-to-osc')}</button>
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
 var yo = require('yo-yo');
 var empty = require('empty-element');
+var translate = require('../translate');
 require('hammerjs');
+
 
 var el = yo`<header class="header">
     <figure>
@@ -9,13 +11,13 @@ var el = yo`<header class="header">
     <nav id="menu" class="menu">
         <ul>
             <li>
-                <a href="/">Home</a>
+                <a href="/">${translate.message('home')}</a>
             </li>
             <li>
-                <a href="#contact">Contacto</a>
+                <a href="#contact">${translate.message('contact')}</a>
             </li>
             <li>
-                <a class="go-to-osc" href="mapaDeParcelas.html">Ir a Open Smart Country</a>
+                <a class="go-to-osc" href="mapaDeParcelas.html">${translate.message('go-to-osc')}</a>
             </li>
         </ul>
     </nav>
