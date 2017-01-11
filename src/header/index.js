@@ -23,13 +23,13 @@ var el = yo`<header class="header">
 </header>`;
 
 module.exports = function header (ctx, next) {
-  var container = document.getElementById('header-container')
+  var container = document.getElementById('header-container');
   empty(container).appendChild(el);
 
   var $burguerButton = document.getElementById("burguer-button");
   var $menu = document.getElementById("menu");
   $burguerButton.addEventListener('click', toggleMenu);
-  
+
   function toggleMenu() {
       $menu.classList.toggle('active');
   }
@@ -50,4 +50,4 @@ module.exports = function header (ctx, next) {
   gestures.on('swiperight', showMenu);
 
   next();
-}
+};

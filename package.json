@@ -44,5 +44,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
     "start": "python -m SimpleHTTPServer"
+  },
+  "jshintConfig": {
+    "esversion": 6
   }
 }
