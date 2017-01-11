@@ -8,8 +8,24 @@
     <meta name="keywords" content="Open Smart Country, Agrotech, IoT, Analitycs, Open Data, Parcela, Terreno" />
     <meta name="description" content="Encuentra alternativas sostenibles para parcelas en desuso basándose en análisis de Datos Abiertos y datos de Sensores" />
     <meta name="author" content="Isabel Muñoz @teanocrata" />
-    <link href="images/OpenSmartCountry_logo_192x192.png" rel="icon" sizes="192x192" />
-    <link href="images/OpenSmartCountry_logo_128x128.png" rel="icon" sizes="128x128" />
+    <link href="public/OpenSmartCountry_logo_128x128.png" rel="icon" sizes="128x128" />
+    <link rel="apple-touch-icon" sizes="57x57" href="public/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="public/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!-- Critical path generated with https://jonassebastianohlsson.com/criticalpathcssgenerator/ and compresed with http://csscompressor.com/ -->
 
     <script>
@@ -33,210 +49,20 @@
     </script>
 </head>
 
-<body class="landing-background">
+<body>
 
     <!-- Menu -->
-    <header class="header">
-        <figure>
-            <a class="icon-logo" href="index.html"><i class="icon-osc-bold"></i></a>
-        </figure>
-        <nav id="menu" class="menu">
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="index.html#contact">Contacto</a>
-                </li>
-                <li>
-                    <a class="go-to-osc" href="mapaDeParcelas.html">Ir a Open Smart Country</a>
-                </li>
-            </ul>
-        </nav>
-        <span id="burguer-button" class="icon-menu burguer-button"></span>
-    </header>
+    <div id="header-container"></div>
 
     <!-- Content -->
 
-    <section class="landing flex-container">
-        <div>
-            <i class="icon-osc-bold logo"></i>
-            <h1 class="title">Tu parcela útil y sostenible</h1>
-            <div>
-                <button class="button recomended-min-button-size" onclick="location.href='/propietario'">Ir a Open Smart Country</button>
-            </div>
-            <div class="arrow-hint">
-                <a href="#start">
-                    <div class="icon-down animated-arrow-1"></div>
-                    <div class="icon-down animated-arrow-2"> </div>
-                </a>
-            </div>
-        </div>
-    </section>
+    <div id="main-container"></div>
 
-    <div id="start" class="content-wrapper">
-        <!-- Public profile -->
-        <section class="section section-profile">
+    <!-- Footer -->
+    <div id="footer-container"></div>
 
-            <!-- Location icons -->
-            <div class="column">
-                <div class="icon-row">
-                    <i class="material-icons md-70 blue600">add_location</i>
-                    <i class="material-icons md-70 green600">edit_location</i>
-                    <i class="material-icons md-70 yelow600">pin_drop</i>
-                </div>
-                <div class="icon-row">
-                    <i class="material-icons md-70 yelow600">map</i>
-                    <i class="material-icons md-70 magenta600">beenhere</i>
-                    <i class="material-icons md-70 blue600">place</i>
-                </div>
-                <div class="icon-row">
-                    <i class="material-icons md-70 red600">satellite</i>
-                    <i class="material-icons md-70 blue600">layers</i>
-                    <i class="material-icons md-70 green600">local_florist</i>
-                </div>
-            </div>
-
-            <!-- Profile text -->
-            <div class="column">
-                <div>
-                    <h2>Pon tu parcela online</h2>
-                    <p>
-                        OSC te ofrece un perfil de tu parcela gratuito. Pon tu parcela online, hoy si algo no está en internet no existe. Añade información de interés y comparte en tus redes sociales.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <div class="photo-wrapper">
-            <div class="everywhere-photo"></div>
-        </div>
-
-        <!-- Everywhere access -->
-        <section class="section section-everywhere">
-
-            <!-- Everywhere access text -->
-            <div class="column">
-                <div>
-                    <h2>La información de tu parcela desde cualquier lugar</h2>
-                    <p>
-                        Puedes acceder a la información de tu parcela desde cualquier smartphone, tablet u ordenador. Estés dondes estés tu información estará contigo.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Devices icon -->
-            <div class="column">
-                <div>
-                    <i class="material-icons">devices</i>
-                </div>
-            </div>
-
-
-        </section>
-
-        <div class="photo-wrapper">
-            <div class="share-photo"></div>
-        </div>
-
-        <!-- Share -->
-        <section class="section section-share">
-
-
-            <div>
-                <!-- Share icons -->
-                <div class="share-icons">
-                    <i class="icon-facebook"></i>
-                    <i class="icon-twitter"></i>
-                    <i class="icon-envelope"></i>
-                    <i class="icon-whatsapp"></i>
-                    <i class="icon-file-pdf"></i>
-
-                    <i class="material-icons">share</i>
-                </div>
-
-
-
-                <!-- Share access text -->
-
-                <div>
-                    <h2>Comparte la información de tu parcela</h2>
-                    <p>
-                        Puedes enviar fácilmente a otros usuarios la información de tu parcela, también puedes descargar un informe para enviar cómodamente o para incluir junto a otro tipo de información.
-                    </p>
-                </div>
-            </div>
-
-        </section>
-
-        <div class="photo-wrapper">
-            <div class="final-photo"></div>
-        </div>
-
-        <!-- Start now -->
-        <section class="section section-final">
-            <div>
-                <i class="icon-osc-bold logo"></i>
-                <h1>Empieza a usar Open Smart Country gratis</h1>
-                <div>
-                    <button class="button recomended-min-button-size" onclick="location.href='/propietario'">Ir a Open Smart Country</button>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        <a class="icon-logo" href="index.html"><i class="icon-osc-bold"></i></a>
-        <div id="contact" class="contact">
-          <a href="tel:+34615401486"><i class="material-icons">phone</i> +34 615 401 486</a>
-          <a href="mailto:info@opensmarcountry.com"><i class="material-icons">email</i> info@opensmartcountry.com</a>
-        </div>
-    </footer>
-
-    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
-    <script type="text/javascript">
-        var $burguerButton = document.getElementById("burguer-button");
-        var $menu = document.getElementById("menu");
-        $burguerButton.addEventListener('click', toggleMenu);
-        $menu.addEventListener('click', toggleMenu);
-
-        function toggleMenu() {
-            $menu.classList.toggle('active');
-        }
-
-        function showMenu() {
-            $menu.classList.add('active');
-        }
-
-        function hideMenu() {
-            $menu.classList.remove('active');
-        }
-
-        //Gestures recognition
-        var $body = document.body;
-
-        var gestures = new Hammer($body);
-        gestures.on('swipeleft', hideMenu);
-        gestures.on('swiperight', showMenu);
-
-        //Async font
-        WebFontConfig = {
-            google: {
-                families: ['Open+Sans:300,400,600:latin', 'Material+Icons']
-            }
-        };
-        (function() {
-            var wf = document.createElement('script');
-            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    </script>
-
-    <link rel="stylesheet" href="css/osc.css" />
+    <script type="application/javascript" src="public/osc.js"></script>
+    <link rel="stylesheet" href="public/osc.css"/>
 </body>
 
 </html>
