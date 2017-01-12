@@ -96,6 +96,7 @@ body, html {
     font-weight: lighter;
     height: 100%;
     margin: 0;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -458,6 +459,10 @@ header a:hover {
 
 .section-final .logo {
     color: rgb(64, 64, 64);
+}
+
+#map {
+  height: 100vh;
 }
 
 footer {

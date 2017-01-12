@@ -53,6 +53,7 @@ gulp.task('build', function () {
 // watch files for changes and reload
 gulp.task('serve', function () {
   browserSync({
+    port: 8000,
     server: {
       baseDir: './'
     }

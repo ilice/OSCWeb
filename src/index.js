@@ -2,6 +2,7 @@ var page = require('page')
 var webFont = require('webfontloader')
 
 require('./landing')
+require('./map')
 
 page()
 

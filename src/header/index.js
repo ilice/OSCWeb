@@ -16,7 +16,7 @@ var el = yo `<header class="header">
                 <a href="#contact">${translate.message('contact')}</a>
             </li>
             <li>
-                <a class="go-to-osc" href="mapaDeParcelas.html">${translate.message('go-to-osc')}</a>
+                <a class="go-to-osc" href="map">${translate.message('go-to-osc')}</a>
             </li>
         </ul>
     </nav>

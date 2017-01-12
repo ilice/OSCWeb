@@ -7,7 +7,7 @@ module.exports = yo`<div>
         <i class="icon-osc-bold logo"></i>
         <h1 class="title">${translate.message('landing-claim')}</h1>
         <div>
-            <button class="button recomended-min-button-size" onclick="location.href='/propietario'">${translate.message('go-to-osc')}</button>
+            <button class="button recomended-min-button-size" onclick="location.href='/map'">${translate.message('go-to-osc')}</button>
         </div>
         <div class="arrow-hint">
             <a href="#start">
