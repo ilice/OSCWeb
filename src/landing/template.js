@@ -1,5 +1,5 @@
-var yo = require('yo-yo');
-var translate = require('../translate');
+var yo = require('yo-yo')
+var translate = require('../translate')
 
 module.exports = yo`<div>
   <section class="landing flex-container landing-background">
@@ -97,4 +97,4 @@ module.exports = yo`<div>
       </div>
     </section>
   </div>
-</div>`;
+</div>`

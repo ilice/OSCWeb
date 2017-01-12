@@ -13,5 +13,4 @@ module.exports = {
   'languaje': 'Languaje',
   'spanish': 'Spanish',
   'english': 'English'
-
-};
+}

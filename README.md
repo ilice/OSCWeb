@@ -20,6 +20,10 @@ Tras ejecutar la tarea anterior se puede arrancar un sencillo servidor que abre 
 $ gulp serve
 ```
 
+Utilizamos browserSync para hacer esto y nos da además de la sincronización y acceso tando en local como en la red, una interfaz con algunas opciones extras. Se puede acceder a ella a través de:
+http://localhost:3001
+Nos da opciones como ver los dispositivos conectados, modificar la velocidad de la conexión o añadir más servidores en otros puertos.
+
 ## Stack
 
 ### Front End
@@ -96,7 +100,6 @@ Como servidor utilizaremos a futuro Django, temporalmente utilizaremos [SimpleHT
 $ python -m SimpleHTTPServer 8000
 ```
 
-En el directorio raiz hay un [ejecutable (startserver.bat)](./startserver.bat) para lanzarlo en windows de manera sencilla.
 
 ## Diseño
 
