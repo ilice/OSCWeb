@@ -17,14 +17,14 @@ var el = yo `<footer>
         </div>
     </footer>`
 
-module.exports = function footer(ctx, next) {
-    var container = document.getElementById('footer-container')
-    empty(container).appendChild(el)
+module.exports = function footer (ctx, next) {
+  var container = document.getElementById('footer-container')
+  empty(container).appendChild(el)
 
-    next()
+  next()
 }
 
-function lang(locale){
+function lang (locale) {
   localStorage.locale = locale
   location.reload()
   return false

@@ -1,6 +1,6 @@
 var jsdom = require('jsdom')
-jsdomGlobal = require('jsdom-global')()
 var localStorage = require('localStorage')
+require('jsdom-global')()
 
 // setup the simplest document possible
 var doc = jsdom.jsdom('<!doctype html><html><body></body></html>')

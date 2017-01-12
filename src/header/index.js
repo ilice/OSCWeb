@@ -3,8 +3,7 @@ var empty = require('empty-element')
 var translate = require('../translate')
 require('hammerjs')
 
-
-var el = yo`<header class="header">
+var el = yo `<header class="header">
     <figure>
         <a class="icon-logo" href="/"><i class="icon-osc-bold"></i></a>
     </figure>
@@ -28,23 +27,23 @@ module.exports = function header (ctx, next) {
   var container = document.getElementById('header-container')
   empty(container).appendChild(el)
 
-  var $burguerButton = document.getElementById("burguer-button")
-  var $menu = document.getElementById("menu")
+  var $burguerButton = document.getElementById('burguer-button')
+  var $menu = document.getElementById('menu')
   $burguerButton.addEventListener('click', toggleMenu)
 
-  function toggleMenu() {
-      $menu.classList.toggle('active')
+  function toggleMenu () {
+    $menu.classList.toggle('active')
   }
 
-  function showMenu() {
-      $menu.classList.add('active')
+  function showMenu () {
+    $menu.classList.add('active')
   }
 
-  function hideMenu() {
-      $menu.classList.remove('active')
+  function hideMenu () {
+    $menu.classList.remove('active')
   }
 
-  //Gestures recognition
+  // Gestures recognition
   var $body = document.body
 
   var gestures = new Hammer($body)

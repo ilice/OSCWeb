@@ -1,7 +1,7 @@
 if (!window.Intl) {
-    window.Intl = require('intl') // polyfill for `Intl`
-    require('intl/locale-data/jsonp/en-US.js')
-    require('intl/locale-data/jsonp/es.js')
+  window.Intl = require('intl') // polyfill for `Intl`
+  require('intl/locale-data/jsonp/en-US.js')
+  require('intl/locale-data/jsonp/es.js')
 }
 
 var IntlMessageFormat = require('intl-messageformat')
