@@ -51,7 +51,7 @@
   "scripts": {
     "test": "mocha",
     "build": "gulp",
-    "start": "python -m SimpleHTTPServer"
+    "start": "gulp serve"
   },
   "jshintConfig": {
     "esversion": 6,

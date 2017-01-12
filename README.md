@@ -11,13 +11,13 @@ $ npm install
 La tarea por defecto de gulp se encarga de generar todos los archivos necesarios.
 
 ```
-$ gulp
+$ npm run build
 ```
 
 Tras ejecutar la tarea anterior se puede arrancar un sencillo servidor que abre el navegador y lo deja sincronizado con el código de forma que si modificamos el ódigo, automáticamente se construye lo necesario y se actualiza el navegador.
 
 ```
-$ gulp serve
+$ npm start
 ```
 
 Utilizamos browserSync para hacer esto y nos da además de la sincronización y acceso tando en local como en la red, una interfaz con algunas opciones extras. Se puede acceder a ella a través de:
