@@ -165,9 +165,59 @@ header a:hover {
     cursor: pointer;
 }
 
+.settingsPane{
+  .menu {
+      text-align: center;
+      color: #66a0fd;
+      position: fixed;
+      left: -100%;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 1);
+      display: flex;
+      align-items: center;
+      width: 30%;
+      transition: 300ms;
+  }
+  .menu.active {
+      left: 0;
+  }
+  .menu ul {
+      padding: 0;
+      margin-bottom: 24px;
+  }
+  .menu li {
+      width: 100%;
+  }
+
+  .menu a:hover {
+      color: inherit;
+      background-color: inherit;
+  }
+
+  .menu a.go-to-osc {
+      border: 1px solid #66a0fd;
+      background-color: white;
+      color: inherit;
+  }
+
+  .icon-logo{
+    padding: 0;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 30px;
+  }
+
+  figure{
+    float: none;
+    position: static;
+  }
+}
+
 .omnibox{
   position: fixed;
-  top: 80px;
+  top: 30px;
   width: 300px;
   margin: 0 auto;
   padding: 10px;
@@ -209,7 +259,7 @@ header a:hover {
 
 .signin{
   position: fixed;
-  top: 80px;
+  top: 30px;
   margin: 0 auto;
   padding: 10px;
   z-index: 500;

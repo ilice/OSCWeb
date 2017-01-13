@@ -17,7 +17,10 @@ var map
 GoogleMapsLoader.load(function (google) {
   map = new google.maps.Map(el, {
     center: kilometroCero,
-    zoom: spainZoom
+    zoom: spainZoom,
+    mapTypeControlOptions: {
+      mapTypeIds: []
+    }
   })
 })
 
