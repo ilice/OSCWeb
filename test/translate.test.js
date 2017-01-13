@@ -17,9 +17,9 @@ describe('Web translator', function () {
     require('intl-messageformat')
     localStorage.setItem('locale', 'es')
     var translate = require('../src/translate')
-    it('Translate home to spanish', function (done) {
-      var text = translate.message('home')
-      expect(text).to.equal('Inicio')
+    it('Translate meet-open-smart-country to spanish', function (done) {
+      var text = translate.message('meet-open-smart-country')
+      expect(text).to.equal('Descubre Open Smart Country')
       done()
     })
     it('Translate contact to spanish', function (done) {
@@ -40,12 +40,12 @@ describe('Web translator', function () {
   })
 
   describe('English translation', function () {
-    it('Translate home to english', function (done) {
+    it('Translate meet-open-smart-country to english', function (done) {
       require('intl-messageformat')
       localStorage.setItem('locale', 'en-US')
       var translate = require('../src/translate')
-      var text = translate.message('home')
-      expect(text).to.equal('Home')
+      var text = translate.message('meet-open-smart-country')
+      expect(text).to.equal('Meet Open Smart Country')
       done()
     })
   })

@@ -21,7 +21,7 @@ GoogleMapsLoader.load(function (google) {
   })
 })
 
-function draw(){
+function draw () {
   google.maps.event.trigger(map, 'resize')
 }
 

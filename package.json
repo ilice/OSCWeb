@@ -65,7 +65,8 @@
       "Hammer",
       "describe",
       "it",
-      "afterEach"
+      "afterEach",
+      "google"
     ]
   },
   "jshintConfig": {
