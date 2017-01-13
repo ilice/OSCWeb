@@ -1,13 +1,17 @@
 var yo = require('yo-yo')
 var translate = require('../translate')
 
+function go_to_osc() {
+  location.href='/'
+}
+
 module.exports = yo`<div>
   <section class="landing flex-container landing-background">
     <div>
         <i class="icon-osc-bold logo"></i>
         <h1 class="title">${translate.message('landing-claim')}</h1>
         <div>
-            <button class="button recomended-min-button-size" onclick="location.href='/map'">${translate.message('go-to-osc')}</button>
+            <button class="button recomended-min-button-size" onclick=${go_to_osc}>${translate.message('go-to-osc')}</button>
         </div>
         <div class="arrow-hint">
             <a href="#start">
@@ -92,7 +96,7 @@ module.exports = yo`<div>
         <i class="icon-osc-bold logo"></i>
         <h1>${translate.message('get-started')}</h1>
         <div>
-          <button class="button recomended-min-button-size" onclick="location.href='/propietario'">${translate.message('go-to-osc')}</button>
+          <button class="button recomended-min-button-size" onclick=${go_to_osc}>${translate.message('go-to-osc')}</button>
         </div>
       </div>
     </section>

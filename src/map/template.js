@@ -12,12 +12,20 @@ var kilometroCero = {
 
 var spainZoom = 7
 
+var map
+
 GoogleMapsLoader.load(function (google) {
-  var map = new google.maps.Map(el, {
+  map = new google.maps.Map(el, {
     center: kilometroCero,
     zoom: spainZoom
   })
-  google.maps.event.trigger(map, 'resize')
 })
 
-module.exports = el
+function draw(){
+  google.maps.event.trigger(map, 'resize')
+}
+
+module.exports = {
+  map: el,
+  draw: draw
+}

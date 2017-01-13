@@ -10,13 +10,13 @@ var el = yo `<header class="header">
     <nav id="menu" class="menu">
         <ul>
             <li>
-                <a href="/">${translate.message('home')}</a>
+                <a href="/osc">${translate.message('meet-open-smart-country')}</a>
             </li>
             <li>
                 <a href="#contact">${translate.message('contact')}</a>
             </li>
             <li>
-                <a class="go-to-osc" href="map">${translate.message('go-to-osc')}</a>
+                <a class="go-to-osc" href="/">${translate.message('go-to-osc')}</a>
             </li>
         </ul>
     </nav>

@@ -1,5 +1,5 @@
 module.exports = {
-  'home': 'Home',
+  'meet-open-smart-country': 'Meet Open Smart Country',
   'contact': 'Contact',
   'go-to-osc': 'Go to Open Smart Country',
   'landing-claim': 'Make your plot useful and sustainable',
