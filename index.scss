@@ -191,6 +191,33 @@ header a:hover {
   }
 }
 
+.button {
+    font-weight: 600;
+    margin-top: 30px;
+    padding: 16px 26px 16px 26px;
+    cursor: pointer;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(67, 134, 252);
+    text-shadow: rgba(0, 0, 0, .0784314) 0 -1px 0;
+}
+
+.button:hover {
+    background-color: rgb(34, 99, 214);
+}
+
+.signin{
+  position: fixed;
+  top: 80px;
+  margin: 0 auto;
+  padding: 10px;
+  z-index: 500;
+  right: 30px;
+  color: white;
+  border-radius: 5%;
+}
+
 
 .landing {
     height: 100vh;
@@ -218,22 +245,6 @@ header a:hover {
     margin: 0;
     color: white;
     text-shadow: 0 2px 3px rgba(0, 0, 0, .4);
-}
-
-.button {
-    font-weight: 600;
-    margin-top: 30px;
-    padding: 16px 26px 16px 26px;
-    cursor: pointer;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    border: none;
-    background-color: rgb(67, 134, 252);
-    text-shadow: rgba(0, 0, 0, .0784314) 0 -1px 0;
-}
-
-.button:hover {
-    background-color: rgb(34, 99, 214);
 }
 
 .arrow-hint {

@@ -12,5 +12,6 @@ module.exports = {
   'get-started': 'Empieza a usar Open Smart Country gratis',
   'languaje': 'Idioma',
   'spanish': 'Español',
-  'english': 'Inglés'
+  'english': 'Inglés',
+  'signin': 'Iniciar sesión'
 }

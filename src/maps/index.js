@@ -5,9 +5,11 @@ var header = require('../header')
 var footer = require('../footer')
 var map = require('../map')
 var omnibox = require('../omnibox')
+var signin = require('../signinButton')
 
 page('/', header, footer, function (ctx, next) {
   var main = document.getElementById('main-container')
   map.addMap(main)
   main.appendChild(omnibox)
+  main.appendChild(signin)
 })
