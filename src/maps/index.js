@@ -5,8 +5,9 @@ var settingsPane = require('../settingsPane')
 var map = require('../map')
 var omnibox = require('../omnibox')
 var signin = require('../signinButton')
+var gestureAreas = require('../gestureAreas')
 
-page('/', settingsPane, function (ctx, next) {
+page('/', gestureAreas, settingsPane, function (ctx, next) {
   var main = document.getElementById('main-container')
   map.addMap(main)
   main.appendChild(omnibox)

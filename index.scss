@@ -166,6 +166,7 @@ header a:hover {
 }
 
 .settingsPane{
+  z-index: 1500;
   .menu {
       text-align: center;
       color: #66a0fd;
@@ -173,21 +174,28 @@ header a:hover {
       left: -100%;
       top: 0;
       bottom: 0;
-      background-color: rgba(255, 255, 255, 1);
+      background-color: rgba(0, 0, 0, 0.3);
       display: flex;
       align-items: center;
-      width: 30%;
+      width: 100%;
       transition: 300ms;
+      ul{
+        width: 30%;
+        background-color: rgba(255, 255, 255, 1);
+        height: 100%;
+        margin-bottom: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        li{
+          width: 100%;
+        }
+      }
   }
+
   .menu.active {
       left: 0;
-  }
-  .menu ul {
-      padding: 0;
-      margin-bottom: 24px;
-  }
-  .menu li {
-      width: 100%;
   }
 
   .menu a:hover {
@@ -221,7 +229,7 @@ header a:hover {
   width: 300px;
   margin: 0 auto;
   padding: 10px;
-  z-index: 500;
+  z-index: 1000;
   background-color: white;
   left: 30px;
   color: lightgrey;
@@ -268,6 +276,14 @@ header a:hover {
   border-radius: 5%;
 }
 
+.left-hit-area{
+  position: fixed;
+  left: 0;
+  right: 95%;
+  top: 0;
+  bottom: 0;
+  z-index: 750;
+}
 
 .landing {
     height: 100vh;
@@ -696,6 +712,28 @@ footer {
         background-color: white;
         color: inherit;
     }
+
+    .omnibox{
+      position: fixed;
+      top: 8px;
+      width: 376px;
+      padding: 12px 8px 11px 8px;
+      left: 8px;
+    }
+
+    .signin{
+      top: 8px;
+    }
+
+    .settingsPane{
+      .menu {
+        ul{
+          width: 80%;
+          }
+      }
+    }
+
+
     .hide-small {
         display: none;
     }
