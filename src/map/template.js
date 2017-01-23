@@ -13,6 +13,7 @@ var kilometroCero = {
 var spainZoom = 7
 
 var map
+var geocoder
 
 GoogleMapsLoader.load(function (google) {
   map = new google.maps.Map(el, {
@@ -22,13 +23,30 @@ GoogleMapsLoader.load(function (google) {
       mapTypeIds: []
     }
   })
+
+  geocoder = new google.maps.Geocoder()
 })
 
 function draw () {
   google.maps.event.trigger(map, 'resize')
 }
 
+function geocode (address) {
+  geocoder.geocode({'address': address}, function (results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location)
+      var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+      })
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status)
+    }
+  })
+}
+
 module.exports = {
   map: el,
-  draw: draw
+  draw: draw,
+  geocode: geocode
 }

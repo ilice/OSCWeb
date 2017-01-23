@@ -7,5 +7,6 @@ module.exports = {
   },
   refreshMap: function () {
     // template.draw()
-  }
+  },
+  geocode: template.geocode
 }
