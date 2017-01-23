@@ -1,6 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`](https://raw.githubusercontent.com/ilice/OSCWeb/master/Dockerfile)
+-	[`latest`](https://github.com/ilice/OSCWeb/blob/master/Dockerfile) Current development
+-	[`0.1.0`](https://github.com/ilice/OSCWeb/blob/0.1.0/Dockerfile)
 
 This image is updated via [commits and releases to the `ilice/OSCWeb` GitHub repo](https://github.com/ilice/OSCWeb).
 
@@ -10,7 +11,7 @@ OSCWeb is the front end side of Open Smart Country, a new project with the inten
 
 > [OSCWeb wiki](https://github.com/ilice/OSCWeb/wiki)
 
-![logo](https://github.com/ilice/OSCWeb/blob/master/assets/favicon/OpenSmartCountry_logo_128x128.png)
+![logo](https://raw.githubusercontent.com/ilice/OSCWeb/master/assets/favicon/OpenSmartCountry_logo_128x128.png)
 
 # How to use this image
 
