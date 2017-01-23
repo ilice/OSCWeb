@@ -13,5 +13,6 @@ module.exports = {
   'languaje': 'Idioma',
   'spanish': 'Español',
   'english': 'Inglés',
-  'signin': 'Iniciar sesión'
+  'signin': 'Iniciar sesión',
+  'search-osc': 'Buscar en Open Smart Country'
 }
