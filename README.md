@@ -1,7 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
 -	[`latest`](https://github.com/ilice/OSCWeb/blob/master/Dockerfile) Current development
--	[`0.1.0`](https://github.com/ilice/OSCWeb/blob/0.1.0/Dockerfile)
+-	[`0.1.1`](https://github.com/ilice/OSCWeb/blob/0.1.1/Dockerfile)
 
 This image is updated via [commits and releases to the `ilice/OSCWeb` GitHub repo](https://github.com/ilice/OSCWeb).
 
