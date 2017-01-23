@@ -14,6 +14,7 @@ var spainZoom = 7
 
 var map
 var geocoder
+var marker
 
 GoogleMapsLoader.load(function (google) {
   map = new google.maps.Map(el, {
@@ -35,14 +36,28 @@ function geocode (address) {
   geocoder.geocode({'address': address}, function (results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location)
-      var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
-      })
+      if (!marker) {
+        marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+          draggable: true
+        })
+        marker.addListener('click', toggleBounce)
+      } else {
+        marker.setPosition(results[0].geometry.location)
+      }
     } else {
-      alert('Geocode was not successful for the following reason: ' + status)
+      console.log('Geocode was not successful for the following reason: ' + status)
     }
   })
+}
+
+function toggleBounce () {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null)
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE)
+  }
 }
 
 module.exports = {
