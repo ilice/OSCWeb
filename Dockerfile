@@ -6,6 +6,7 @@ WORKDIR /home/node/OSCWeb/
 
 RUN npm install
 RUN npm run build
+RUN npm test
 
 CMD node server.js
 
