@@ -27,6 +27,7 @@ function toggleMenu () {
 
 function geocodeAddress () {
   geocode(input.value)
+  input.blur()
 }
 
 module.exports = el
