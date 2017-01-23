@@ -10,6 +10,7 @@ var gestureAreas = require('../gestureAreas')
 page('/', gestureAreas, settingsPane, function (ctx, next) {
   var main = document.getElementById('main-container')
   map.addMap(main)
-  main.appendChild(omnibox)
+  main.appendChild(omnibox.container)
+  map.bindTo(omnibox)
   main.appendChild(signin)
 })

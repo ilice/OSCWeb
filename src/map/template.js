@@ -14,7 +14,6 @@ var kilometroCero = {
 var spainZoom = 7
 
 var map
-var geocoder
 
 GoogleMapsLoader.load(function (google) {
   map = new google.maps.Map(el, {
@@ -24,32 +23,34 @@ GoogleMapsLoader.load(function (google) {
       mapTypeIds: []
     }
   })
-
-  geocoder = new google.maps.Geocoder()
 })
 
-function draw () {
-  google.maps.event.trigger(map, 'resize')
-}
+function bindTo (omnibox) {
+  GoogleMapsLoader.load(function (google) {
+    var autocomplete = new google.maps.places.Autocomplete(omnibox.input)
+    autocomplete.bindTo('bounds', map)
 
-function geocode (address) {
-  geocoder.geocode({'address': address}, function (results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      map.fitBounds(results[0].geometry.viewport)
-    } else {
-      console.log('Geocode was not successful for the following reason: ' + status)
+    var geocoder = new google.maps.Geocoder()
+
+    function geocode (address) {
+      geocoder.geocode({'address': address}, function (results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+          map.fitBounds(results[0].geometry.viewport)
+        } else {
+          console.log('Geocode was not successful for the following reason: ' + status)
+        }
+      })
     }
-  })
-}
 
-function autocomplete (input) {
-  var autocomplete = new google.maps.places.Autocomplete(input)
-  autocomplete.bindTo('bounds', map)
+    omnibox.searchButton.addEventListener('click', function () {
+      geocode(omnibox.input.value)
+    })
+
+    omnibox.input.addEventListener('keyup', (event) => { event.key === 'Enter' ? geocode(omnibox.input.value) : null }, false)
+  })
 }
 
 module.exports = {
   map: el,
-  draw: draw,
-  geocode: geocode,
-  autocomplete: autocomplete
+  bindTo: bindTo
 }
