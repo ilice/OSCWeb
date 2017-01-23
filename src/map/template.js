@@ -2,6 +2,7 @@ var yo = require('yo-yo')
 var GoogleMapsLoader = require('google-maps') // only for common js environments
 
 GoogleMapsLoader.KEY = 'AIzaSyB-K-4XmS9a5ItnkrqJSS9070qAeRuXt6M'
+GoogleMapsLoader.LIBRARIES = ['places']
 
 var el = yo `<div id="map"></>`
 
@@ -14,7 +15,6 @@ var spainZoom = 7
 
 var map
 var geocoder
-var marker
 
 GoogleMapsLoader.load(function (google) {
   map = new google.maps.Map(el, {
@@ -35,33 +35,21 @@ function draw () {
 function geocode (address) {
   geocoder.geocode({'address': address}, function (results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
-      map.setCenter(results[0].geometry.location)
-      if (!marker) {
-        marker = new google.maps.Marker({
-          map: map,
-          position: results[0].geometry.location,
-          draggable: true
-        })
-        marker.addListener('click', toggleBounce)
-      } else {
-        marker.setPosition(results[0].geometry.location)
-      }
+      map.fitBounds(results[0].geometry.viewport)
     } else {
       console.log('Geocode was not successful for the following reason: ' + status)
     }
   })
 }
 
-function toggleBounce () {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null)
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE)
-  }
+function autocomplete (input) {
+  var autocomplete = new google.maps.places.Autocomplete(input)
+  autocomplete.bindTo('bounds', map)
 }
 
 module.exports = {
   map: el,
   draw: draw,
-  geocode: geocode
+  geocode: geocode,
+  autocomplete: autocomplete
 }

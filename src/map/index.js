@@ -8,5 +8,6 @@ module.exports = {
   refreshMap: function () {
     // template.draw()
   },
-  geocode: template.geocode
+  geocode: template.geocode,
+  autocomplete: template.autocomplete
 }
