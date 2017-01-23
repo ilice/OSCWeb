@@ -1,106 +1,55 @@
-# OSCWeb
+# Supported tags and respective `Dockerfile` links
 
-## Desarrollo
+-	[`latest`](https://raw.githubusercontent.com/ilice/OSCWeb/master/Dockerfile)
 
-Lo primero es instalar todas las librerias necesarias
+This image is updated via [commits and releases to the `ilice/OSCWeb` GitHub repo](https://github.com/ilice/OSCWeb).
 
-```
-$ npm install
-```
+# What is OSCWeb?
 
-La tarea por defecto de gulp se encarga de generar todos los archivos necesarios.
+OSCWeb is the front end side of Open Smart Country, a new project with the intent of revolution land use. It's developed with several libraries and frameworks like nodejs,  npm, Browserify, Gulp, SaSS, babelify, pagejs, yo-yo, and more.
 
-```
-$ npm run build
-```
+> [OSCWeb wiki](https://github.com/ilice/OSCWeb/wiki)
 
-Tras ejecutar la tarea anterior se puede arrancar un sencillo servidor que abre el navegador y lo deja sincronizado con el código de forma que si modificamos el ódigo, automáticamente se construye lo necesario y se actualiza el navegador.
+![logo](https://github.com/ilice/OSCWeb/blob/master/assets/favicon/OpenSmartCountry_logo_128x128.png)
 
-```
-$ npm start
-```
+# How to use this image
 
-Utilizamos browserSync para hacer esto y nos da además de la sincronización y acceso tando en local como en la red, una interfaz con algunas opciones extras. Se puede acceder a ella a través de:
-http://localhost:3001
-Nos da opciones como ver los dispositivos conectados, modificar la velocidad de la conexión o añadir más servidores en otros puertos.
+## Starting simple web server
 
-## Stack
-
-### Front End
-
-#### [<img src="https://docs.npmjs.com/images/npm.svg" alt="npm" style="height: 16px;"/>](https://www.npmjs.com/)
-
-[npm](https://www.npmjs.com/) será nuestro gestor de paquetes para Front End, la descripción del proyecto está en el archivo package.json, la documentación al respecto está en ["Using a package.json"](https://docs.npmjs.com/getting-started/using-a-package.json).
-
-Para utilizarlo es necesario tener instalado [node.js](https://nodejs.org/en/).
-
-Una vez que tenemos estos paquetes necesitamos construirlos. Para ello utilizaremos [Browserify](http://browserify.org/).
-
-#### [<img alt="browserify" src="https://carlosazaustre.es/blog/content/images/2015/03/687474703a2f2f737562737461636b2e6e65742f696d616765732f62726f777365726966795f6c6f676f2e706e67.png" alt="Browserify" style="height: 20px;"/>](http://browserify.org/)
-
-[Browserify](http://browserify.org/) será el encargado de generar el archivo de javascript que tendrá nuestro código, las dependencias y demás.
-
-[Webpack](https://webpack.github.io/) (parece que se está convirtiendo en el estándar) además nos permitiría generar transformaciones a nuestro código , por ejemplo para utilizar coffescript y generar el js. También permite requerir assets como .png. Es bastante más avanzado, de momento con Browserify tenemos suficiente.
-
-Esto generaría tareas repetitivas, para eso utilizamos un automatizador.
-
-#### [<img height="40" alt="Gulp" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png">](http://gulpjs.com/)
-
-Usaremos [Gulp](http://gulpjs.com/) que utiliza el archivo [gulpfile.js](/.gulpfile.js) para saber paso a paso lo que tiene que ejecutar. Por ejemplo le diremos que utilice browserify para generar el js, que copie las imágenes o los css a la carpeta que digamos. Esto nos permite tener mejor organizado nuestro código. Otra alternativa es [grunt](http://gruntjs.com/).
-
-Lo utilizaremos solo en desarrollo por lo que lo ponemos como dependencia solo de desarrollo.
-
-```
-$ npm install gulp --save-dev
+```console
+$ docker run -ti -P -d --name oscweb teanocrata/oscweb
 ```
 
-Además utilizaremos un preprocesador para css para que en desarrollo sea más fácil escribir el código css, por ejemplo añadiendo variables o campos calculados y una sintaxis más sencilla en general.
+Runs container in background and prints container ID with web server at a random port with OSCWeb page.
 
-#### [<img src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="Sass" style="height: 18px;"/>](http://sass-lang.com/)
+## Starting simple web server at specific port
 
-Utilizaremos [Sass](http://sass-lang.com/) en desarrollo como preprocesador css para que quede más organizado.
-
-```
-$ npm install gulp-sass --save-dev
+```console
+$ docker run -ti -p 8000:8000 -d --name oscweb teanocrata/oscweb
 ```
 
-### [<img src="https://raw.githubusercontent.com/babel/logo/master/babel.png" alt="babel" style="height: 20px;"/>](https://babeljs.io/)
+This binds port 8000 of the container to port 8000 on the host machine.
 
-Lo utilizaremos para poder usar código java nuevo en navegadores que no lo tienen implementado, como las arros functions
+Then you can hit `http://localhost:8080` or `http://host-ip:8080` in your browser.
 
-Utilizaremos babelify que nos permite usar babel en browserify.
+## Run a console in the container
 
-```
-$ npm install --save-dev  browserify babelify vinyl-source-stream  babel-preset-es2015
-```
-
-### [<img src="http://f.cl.ly/items/3i3n001d0s1Q031r2q1P/page.png" alt="pagejs" style="height: 35px;"/>](https://visionmedia.github.io/page.js/)
-
-[pagejs](https://visionmedia.github.io/page.js/) nos permitirá construir la aplicación como una single page, sin recargar cada vez.
-
-```
-$ npm install --save page
+```console
+$ docker exec -ti oscweb bash
 ```
 
-### [![pagejs](https://raw.githubusercontent.com/maxogden/yo-yo/master/yoyojs.png)](https://www.npmjs.com/package/yo-yo)
+# User Feedback
 
-Utilizaremos esta librería [yo-yo](https://www.npmjs.com/package/yo-yo) para ayudarnos mantener el código modularizado al estilo React.
+## Issues
 
-### [![FormatJS](https://31.media.tumblr.com/d75b6fa3b419f508b9792b2afa8933f2/tumblr_inline_ndg3pbNUWk1t01opa.png)]
+If you have any problems with or questions about this image, please contact us through a [GitHub issue](https://github.com/ilice/OSCWeb/issues).
 
-Utilizaremos la librería FormatJS para traducir la aplicación y dar soporte en general a los idiomas, además utilizaremos un polifill para safary que no soporta la librería intl.
+## Contributing
 
-### Back End
+You are invited to contribute new features, fixes, or updates, large or small; we are always thrilled to receive pull requests, and do our best to process them as fast as we can.
 
-#### python - Servidor
+Before you start to code, we recommend discussing your plans through a [GitHub issue](https://github.com/ilice/OSCWeb/issues), especially for more ambitious contributions. This gives other contributors a chance to point you in the right direction, give you feedback on your design, and help you find out if someone else is working on the same thing.
 
-Como servidor utilizaremos a futuro Django, temporalmente utilizaremos [SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) como una forma muy sencilla de empezar, levanta un servidor que sirve el contenido del directorio actual. Para ejecutalo le pasamos el puerto:
+## Documentation
 
-```
-$ python -m SimpleHTTPServer 8000
-```
-
-
-## Diseño
-
-De momento no se usa nada en especial, puede ser interesante Materialize o Material Design Lite, este último es del equipo de google. Está pendiente de decisión. Puede ser interesante mirar cómo está [aquí](https://github.com/google/web-starter-kit/blob/master/docs/mdl-sass.md)
+Documentation for this image will be stored in the [OSCWeb wiki](https://github.com/ilice/OSCWeb/wiki).
