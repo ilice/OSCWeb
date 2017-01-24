@@ -1,3 +1,6 @@
 --require test/utils/dom.js
 --require chai
 -r jsdom-global/register
+-R spec
+--full-trace
+--timeout 15000

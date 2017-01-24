@@ -66,6 +66,7 @@
       "Hammer",
       "describe",
       "it",
+      "beforeEach",
       "afterEach",
       "google"
     ]
