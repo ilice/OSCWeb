@@ -1,4 +1,5 @@
-var request = require('superagent')
+require('es6-promise').polyfill()
+require('isomorphic-fetch')
 
 function createLayerFromBoundingBox (bbox, next) {
   var layer
@@ -18,14 +19,16 @@ function checkBbox (bbox) {
 function loadLayer (layer, bbox, next) {
   var err = checkBbox(bbox)
   if (!err) {
-    request
-  .get('https://opensmartcountry.com/cadastral/parcel')
-  .query({ bbox: bbox.toString() })
-  .end(function (err, res) {
-    if (err) return console.log(err)
-    layer = res.body
-    next(err, layer)
-  })
+    fetch('https://opensmartcountry.com/cadastral/parcel/?bbox=' + bbox.toString())
+      .then(function (res) {
+        return res.json()
+      })
+      .then(function (layer) {
+        next(null, layer)
+      })
+      .catch(function (err) {
+        console.log(err)
+      })
   } else {
     next(err)
   }
