@@ -1,9 +1,10 @@
 var yo = require('yo-yo')
 var empty = require('empty-element')
 var GoogleMapsLoader = require('google-maps') // only for common js environments
+const env = require('../env')
 
-GoogleMapsLoader.KEY = 'AIzaSyB-K-4XmS9a5ItnkrqJSS9070qAeRuXt6M'
-GoogleMapsLoader.LIBRARIES = ['places']
+GoogleMapsLoader.KEY = env.GOOGLE_API_KEY
+GoogleMapsLoader.LIBRARIES = ['places', 'geometry']
 
 var map
 
@@ -25,9 +26,47 @@ function addMap (mapContainer, callback) {
         mapTypeIds: []
       }
     })
+    map.addListener('idle', function () {
+      var bbox = map.getBounds()
+      var area = computeArea(bbox)
+      if (area <= 2000000) {
+        var url = env.CADASTRAL_PARCEL_URI + '?bbox=' + getOptimalBbox(bbox).toUrlValue()
+        map.data.loadGeoJson(url)
+      }
+    })
   })
 
   return empty(mapContainer).appendChild(el)
+}
+
+function getOptimalBbox (bbox) {
+  var reducedBbox = bbox
+  if (computeArea(bbox) > 500000) {
+    var distance = google.maps.geometry.spherical.computeDistanceBetween(
+      bbox.getSouthWest(), bbox.getNorthEast())
+    var offsetdistance = distance * 0.1
+    reducedBbox = new google.maps.LatLngBounds(
+      google.maps.geometry.spherical.computeOffset(bbox
+        .getSouthWest(), offsetdistance, 45),
+            google.maps.geometry.spherical.computeOffset(bbox
+              .getNorthEast(), offsetdistance, -135))
+  }
+  return reducedBbox
+}
+
+function computeArea (bbox) {
+  var area = 0
+
+  var northEastCorner = bbox.getNorthEast()
+  var southWestCorner = bbox.getSouthWest()
+  var northWestCorner = new google.maps.LatLng(northEastCorner.lat(),
+southWestCorner.lng())
+
+  area = google.maps.geometry.spherical.computeDistanceBetween(
+northEastCorner, northWestCorner) * google.maps.geometry.spherical.computeDistanceBetween(
+northWestCorner, southWestCorner)
+
+  return area
 }
 
 function bindTo (omnibox) {

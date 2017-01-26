@@ -37,6 +37,18 @@ app.get('/osc', function (req, res) {
   })
 })
 
+app.get('/mock/cadastral/parcel', function (req, res) {
+  var jsonFile = './test/resources/cadastral_parcel_sample.json'
+  res.sendFile(jsonFile, options, function (err) {
+    if (err) {
+      console.log(err)
+      res.status(err.status).end()
+    } else {
+      console.log('Sent:', fileName)
+    }
+  })
+})
+
 app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!")
 })

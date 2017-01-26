@@ -7,15 +7,6 @@
     "type": "git",
     "url": "git+https://github.com/ilice/OSCWeb.git"
   },
-  "keywords": [
-    "Open",
-    "Smart",
-    "Country",
-    "Plot(parcel)",
-    "enhancement",
-    "and",
-    "boosting"
-  ],
   "author": "Isabel Muñoz",
   "license": "Apache-2.0",
   "bugs": {
@@ -45,20 +36,28 @@
     "clear-require": "^1.0.1",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-nodemon": "^2.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-spawn-mocha": "^3.1.0",
+    "gulp-standard": "^8.0.3",
     "jsdom": "^9.9.1",
     "jsdom-global": "^2.1.1",
     "localStorage": "^1.0.3",
     "mocha": "^3.2.0",
+    "psi": "^2.0.4",
     "standard": "^8.6.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "test": "npm run lint && mocha",
+    "test": "npm run lint && gulp test",
     "build": "gulp",
-    "start": "gulp && gulp serve",
-    "lint": "standard"
+    "start": "gulp && node ./server.js",
+    "lint": "gulp lint",
+    "develop": "gulp && gulp develop"
   },
   "standard": {
     "parser": "babel-eslint",
