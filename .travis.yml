@@ -13,4 +13,4 @@ notifications:
     on_success: always
     on_failure: always
 git:
-  depth: 1
+  depth: 3
