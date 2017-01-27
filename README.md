@@ -15,10 +15,14 @@ OSCWeb is the front end side of Open Smart Country, a new project with the inten
 
 # How to use this image
 
+OSCWeb needs some secrets to start. To solve it, mount individual host secret file. The -v flag used so far can target a single file instead of entire directories from the host machine. This is done by mapping the specific file on each side of the container: secrets.ini.
+
+secrets.ini template: [secrets.template.ini](https://github.com/ilice/OSCWeb/blob/master/settings/secrets.template.ini)
+
 ## Starting simple web server
 
 ```console
-$ docker run -ti -P -d --name oscweb teanocrata/oscweb
+$ docker run -ti -P -d -v ~/secrets.ini:/home/node/OSCWeb/settings/secrets.ini --name oscweb teanocrata/oscweb
 ```
 
 Runs container in background and prints container ID with web server at a random port with OSCWeb page.
@@ -26,7 +30,7 @@ Runs container in background and prints container ID with web server at a random
 ## Starting simple web server at specific port
 
 ```console
-$ docker run -ti -p 8000:8000 -d --name oscweb teanocrata/oscweb
+$ docker run -ti -p 8000:8000 -d -v ~/secrets.ini:/home/node/OSCWeb/settings/secrets.ini --name oscweb teanocrata/oscweb
 ```
 
 This binds port 8000 of the container to port 8000 on the host machine.

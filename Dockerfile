@@ -5,9 +5,7 @@ ADD . /home/node/OSCWeb/
 WORKDIR /home/node/OSCWeb/
 
 RUN npm install
-RUN npm run build
-# RUN npm test
 
-CMD node server.js
+CMD npm start
 
 EXPOSE 8000
