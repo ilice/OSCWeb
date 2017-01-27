@@ -5,12 +5,3 @@ node_js:
 before_install: npm install -g gulp
 install: npm run build
 script: npm test
-notifications:
-  email: false
-  slack:
-    rooms:
-    - opensmartcountry:gjRfTD0YvySQZPrFw1gFfGmk
-    on_success: always
-    on_failure: always
-git:
-  depth: 3
