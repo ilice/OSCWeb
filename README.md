@@ -1,6 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`](https://github.com/ilice/OSCWeb/blob/master/Dockerfile) Current development
+-	[`latest`](https://github.com/ilice/OSCWeb/blob/master/Dockerfile) Current development [![Build Status](https://travis-ci.org/ilice/OSCWeb.svg?branch=master)](https://travis-ci.org/ilice/OSCWeb)
 -	[`0.2.0`](https://github.com/ilice/OSCWeb/blob/0.2.0/Dockerfile) germinatio version
 
 This image is updated via [commits and releases to the `ilice/OSCWeb` GitHub repo](https://github.com/ilice/OSCWeb).
