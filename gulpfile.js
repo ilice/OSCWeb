@@ -68,7 +68,7 @@ gulp.task('build', function () {
   .pipe(gulp.dest('public'))
 })
 
-gulp.task('default', ['clean', 'prod-environment', 'styles', 'images', 'build'])
+gulp.task('default', ['prod-environment', 'styles', 'images', 'build'])
 
 // Run PageSpeed Insights
 // Update the below URL to the public URL of your site
@@ -99,7 +99,7 @@ gulp.task('desktop', function () {
 // connected to browser-sync after restarting nodemon
 var BROWSER_SYNC_RELOAD_DELAY = 500
 
-gulp.task('nodemon', ['dev-environment'], function (cb) {
+gulp.task('nodemon', ['dev-environment', 'styles', 'images', 'build'], function (cb) {
   var called = false
   return nodemon({
 

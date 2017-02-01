@@ -569,6 +569,31 @@ header a:hover {
   height: 100vh;
 }
 
+.status-container{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.status-container{
+  i{
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    display: block;
+    color: rgb(64, 64, 64)
+  }
+}
+
+.status-container.loading{
+  display: flex
+}
+
 footer {
     display: flex;
     justify-content: space-between;

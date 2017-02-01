@@ -2,6 +2,7 @@ var yo = require('yo-yo')
 var empty = require('empty-element')
 var GoogleMapsLoader = require('google-maps') // only for common js environments
 const env = require('../env')
+const status = require('../status')
 
 GoogleMapsLoader.KEY = env.GOOGLE_API_KEY
 GoogleMapsLoader.LIBRARIES = ['places', 'geometry']
@@ -27,12 +28,20 @@ function addMap (mapContainer, callback) {
       }
     })
     map.addListener('idle', function () {
+      status.loading()
       var bbox = map.getBounds()
-      var area = computeArea(bbox)
-      if (area <= 2000000) {
-        var url = env.CADASTRAL_PARCEL_URI + '?bbox=' + getOptimalBbox(bbox).toUrlValue()
-        map.data.loadGeoJson(url)
-      }
+
+      map.data.forEach(function (feature) {
+        var zoneType = feature.getProperty('zoneType')
+        if (typeof zoneType === 'undefined' || zoneType !== 'administrative') {
+          map.data.remove(feature)
+        } else {
+
+        }
+      })
+
+      var url = env.CADASTRAL_PARCEL_URI + '?bbox=' + getOptimalBbox(bbox).toUrlValue()
+      map.data.loadGeoJson(url, null, status.loaded)
     })
   })
 
