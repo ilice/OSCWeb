@@ -40,6 +40,20 @@ function addMap (mapContainer, callback) {
         }
       })
 
+      // Add a basic style.
+      map.data.setStyle(function (feature) {
+        var mag = parseFloat(feature.getProperty('value')) * 0.001
+        return /** @type {google.maps.Data.StyleOptions} */({
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: mag,
+            fillColor: '#f00',
+            fillOpacity: 0.35,
+            strokeWeight: 0
+          }
+        })
+      })
+
       var url = env.CADASTRAL_PARCEL_URI + '?bbox=' + getOptimalBbox(bbox).toUrlValue()
       map.data.loadGeoJson(url, null, status.loaded)
     })

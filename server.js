@@ -36,10 +36,17 @@ app.get('/osc', function (req, res) {
     }
   })
 })
-
+// /mock/cadastral/parcel/?bbox=37.386812,-9.429769,43.025548,2.206815
 app.get('/mock/cadastral/parcel', function (req, res) {
-  var jsonFile = './test/resources/cadastral_parcel_sample.json'
-  res.sendFile(jsonFile, options, function (err) {
+  var bbox = req.query.bbox.split(',')
+  var file
+  if (bbox[2] - bbox[0] > 1) {
+    file = './test/fixtures/cadastral_parcel_point_sample_geoJSON.json'
+  } else {
+    file = './test/fixtures/cadastral_parcel_sample.json'
+  }
+
+  res.sendFile(file, options, function (err) {
     if (err) {
       console.log(err)
       res.status(err.status).end()
