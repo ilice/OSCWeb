@@ -20,7 +20,10 @@ function getFeature (coordinates, value) {
 function buildGeometry (coordinates) {
   var geom = {
     type: 'Point',
-    coordinates: [ coordinates[1], coordinates[0]]
+    coordinates: [
+      coordinates[1],
+      coordinates[0]
+    ]
   }
   return geom
 }
