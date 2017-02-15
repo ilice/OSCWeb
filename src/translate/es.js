@@ -21,5 +21,6 @@ module.exports = {
   'share': 'Compartir',
   'suggest-an-edit': 'Sugerir un cambio',
   'claim-plot': 'Reclamar esta parcela',
-  NUM_SQUARE_METTERS: '{meters, number} m\xB2'
+  'area': 'Superficie catastral {squareMeters, number} m\xB2',
+  'altitude': 'Altitud media {meters, number} m'
 }

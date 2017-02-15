@@ -21,5 +21,6 @@ module.exports = {
   'share': 'Share',
   'suggest-an-edit': 'Suggest an edit',
   'claim-plot': 'Claim this plot',
-  NUM_SQUARE_METTERS: '{meters, number} m\xB2'
+  'area': 'Cadastral area {squareMeters, number} m\xB2',
+  'altitude': 'Average altitude {meters, number} m'
 }

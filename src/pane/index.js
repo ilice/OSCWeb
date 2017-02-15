@@ -59,9 +59,10 @@ function show (dataFeature) {
       var sectionInfo = yo`<div class="section-info"></div>`
       widgetPane.appendChild(sectionInfo)
 
-      appendSectionInfo(sectionInfo, 'photo_size_select_small', translate.meters(dataFeature.getProperty('areaValue')))
-      appendSectionInfo(sectionInfo, 'mode_edit', translate.message('suggest-an-edit'))
-      appendSectionInfo(sectionInfo, 'security', translate.message('claim-plot'))
+      appendSectionInfo(sectionInfo, 'photo_size_select_small', 'area', {squareMeters: dataFeature.getProperty('areaValue')})
+      appendSectionInfo(sectionInfo, 'photo_size_select_actual', 'altitude', {meters: dataFeature.getProperty('elevation')})
+      appendSectionInfo(sectionInfo, 'mode_edit', 'suggest-an-edit')
+      appendSectionInfo(sectionInfo, 'security', 'claim-plot')
     }
   }
 }
@@ -82,9 +83,9 @@ function close () {
   empty(el)
 }
 
-function appendSectionInfo (container, infoType, value) {
+function appendSectionInfo (container, infoType, value, opts) {
   var sectionInfo = yo`<div class="section-info-line">
-      <i class="material-icons">${infoType}</i> ${value}
+      <i class="material-icons">${infoType}</i> ${translate.message(value, opts)}
   </div>`
   container.appendChild(sectionInfo)
 }

@@ -20,9 +20,5 @@ module.exports = {
     opts = opts || {}
     var msg = new IntlMessageFormat(MESSAGES[locale][text], locale, null)
     return msg.format(opts)
-  },
-  meters: function (num) {
-    var numSquareMetters = new IntlMessageFormat(MESSAGES[locale].NUM_SQUARE_METTERS, locale, null)
-    return numSquareMetters.format({meters: num})
   }
 }
