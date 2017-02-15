@@ -14,5 +14,9 @@ module.exports = {
   'spanish': 'Spanish',
   'english': 'English',
   'signin': 'Sign in',
-  'search-osc': 'Search Open Smart Country'
+  'search-osc': 'Search Open Smart Country',
+  'save': 'Save',
+  'nearby-plots': 'Nearby plots',
+  'download': 'Download report',
+  'share': 'Share'
 }

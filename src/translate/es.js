@@ -14,5 +14,9 @@ module.exports = {
   'spanish': 'Español',
   'english': 'Inglés',
   'signin': 'Iniciar sesión',
-  'search-osc': 'Buscar en Open Smart Country'
+  'search-osc': 'Buscar en Open Smart Country',
+  'save': 'Guardar',
+  'nearby-plots': 'Parcelas cercanas',
+  'download': 'Descargar informe',
+  'share': 'Compartir'
 }
