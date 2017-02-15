@@ -2,15 +2,17 @@ var yo = require('yo-yo')
 var empty = require('empty-element')
 var translate = require('../translate')
 var omnibox = require('../omnibox')
+const dataLayer = require('../dataLayer')
 
 var el = yo `<section id="pane"></section>`
 bindTo(omnibox)
 
 document.body.appendChild(el)
 
-function show (feature) {
-  if (feature) {
-    if (feature.getGeometry().getType() !== 'Point') {
+function show (dataFeature) {
+  if (dataFeature) {
+    if (dataFeature.getGeometry().getType() !== 'Point') {
+      dataFeature = dataLayer.wrapParcelData(dataFeature)
       var widgetPane = yo`<div class="widget-pane"></section></div>`
       empty(el).appendChild(widgetPane)
 
@@ -20,13 +22,14 @@ function show (feature) {
       var imageButton = yo`<button class="button"><img src=""/ class="section-hero-header-button-image"/></button>`
       sectionHeroHeader.appendChild(imageButton)
 
-      omnibox.input.value = feature.getProperty('nationalCadastralReference')
+      omnibox.input.value = dataFeature.nationalCadastralReference
       var sectionHeroHeaderDescription =
         yo`<div class="section-hero-header-description">
           <div class="section-hero-header-title">
-            <h1>${feature.getProperty('nationalCadastralReference')}</h1>
+            <h1>${dataFeature.nationalCadastralReference}</h1>
           </div>
           <div class="section-hero-header-description-container">
+            <div>${dataFeature.address}</div>
           </div>
         </div>`
       sectionHeroHeader.appendChild(sectionHeroHeaderDescription)
@@ -52,6 +55,13 @@ function show (feature) {
         </div>
       </div>`
       widgetPane.appendChild(sectionAction)
+
+      var sectionInfo = yo`<div class="section-info"></div>`
+      widgetPane.appendChild(sectionInfo)
+
+      appendSectionInfo(sectionInfo, 'photo_size_select_small', translate.meters(dataFeature.getProperty('areaValue')))
+      appendSectionInfo(sectionInfo, 'mode_edit', translate.message('suggest-an-edit'))
+      appendSectionInfo(sectionInfo, 'security', translate.message('claim-plot'))
     }
   }
 }
@@ -70,6 +80,13 @@ function bindTo (omnibox) {
 
 function close () {
   empty(el)
+}
+
+function appendSectionInfo (container, infoType, value) {
+  var sectionInfo = yo`<div class="section-info-line">
+      <i class="material-icons">${infoType}</i> ${value}
+  </div>`
+  container.appendChild(sectionInfo)
 }
 
 module.exports = {

@@ -52,4 +52,19 @@
     font-size: 14px;
   }
 
+  .section-info{
+    padding-top: 24px;
+  }
+
+  .section-info-line{
+    padding: 0 24px 6px;
+    display: flex;
+    align-items: center;
+    i {
+      margin-right: 24px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(67, 134, 252);
+    }
+  }
+
 }

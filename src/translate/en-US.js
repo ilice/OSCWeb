@@ -18,5 +18,8 @@ module.exports = {
   'save': 'Save',
   'nearby-plots': 'Nearby plots',
   'download': 'Download report',
-  'share': 'Share'
+  'share': 'Share',
+  'suggest-an-edit': 'Suggest an edit',
+  'claim-plot': 'Claim this plot',
+  NUM_SQUARE_METTERS: '{meters, number} m\xB2'
 }

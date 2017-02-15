@@ -38,6 +38,21 @@ function loadLayer (layer, bbox, next) {
   }
 }
 
+function wrapParcelData (dataFeature) {
+  var wrappedDataFeature = dataFeature
+  wrappedDataFeature.nationalCadastralReference = dataFeature.getProperty('nationalCadastralReference')
+  wrappedDataFeature.areaValue = dataFeature.getProperty('areaValue')
+  wrappedDataFeature.address = getAddress(dataFeature)
+  return wrappedDataFeature
+}
+
+function getAddress (dataFeature) {
+  if (dataFeature.getProperty('cadastralData').bico) {
+    return dataFeature.getProperty('cadastralData').bico.bi.ldt
+  }
+}
+
 module.exports = {
-  createLayerFromBoundingBox: createLayerFromBoundingBox
+  createLayerFromBoundingBox: createLayerFromBoundingBox,
+  wrapParcelData: wrapParcelData
 }

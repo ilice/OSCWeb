@@ -18,5 +18,8 @@ module.exports = {
   'save': 'Guardar',
   'nearby-plots': 'Parcelas cercanas',
   'download': 'Descargar informe',
-  'share': 'Compartir'
+  'share': 'Compartir',
+  'suggest-an-edit': 'Sugerir un cambio',
+  'claim-plot': 'Reclamar esta parcela',
+  NUM_SQUARE_METTERS: '{meters, number} m\xB2'
 }
