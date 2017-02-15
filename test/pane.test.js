@@ -25,6 +25,14 @@ describe('Pane', function () {
       return parcelFeature.properties[property]
     }
 
+    parcelFeature.getGeometry = function getGeometry () {
+      var geometry = parcelFeature.geometry
+      geometry.getType = function getType () {
+        return geometry.type
+      }
+      return geometry
+    }
+
     it('should have a hero header section with an image button', function () {
       pane.show(parcelFeature)
       var sectionsHeroHeader = document.getElementById('pane').getElementsByClassName('section-hero-header')
