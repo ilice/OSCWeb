@@ -180,7 +180,7 @@ header a:hover {
       width: 100%;
       transition: 300ms;
       ul{
-        width: 30%;
+        width: 408px;
         background-color: rgba(255, 255, 255, 1);
         height: 100%;
         margin-bottom: 0;
@@ -248,6 +248,8 @@ header a:hover {
     cursor: pointer;
   }
 }
+
+@import 'pane';
 
 .button {
     font-weight: 600;
@@ -471,9 +473,18 @@ header a:hover {
     font-size: 70px;
 }
 
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
 .material-icons.blue600 {
     color: rgb(255, 255, 255);
     background: #3980FB;
+}
+
+.material-icons.blue600.inverted {
+    color: #3980FB;
+    background: rgb(255, 255, 255);
 }
 
 .material-icons.red600 {
