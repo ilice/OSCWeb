@@ -4,6 +4,7 @@ var GoogleMapsLoader = require('google-maps') // only for common js environments
 const env = require('../env')
 const status = require('../status')
 const pane = require('../pane')
+const dataLayer = require('../dataLayer')
 
 GoogleMapsLoader.KEY = env.GOOGLE_API_KEY
 GoogleMapsLoader.LIBRARIES = ['places', 'geometry']
@@ -32,7 +33,10 @@ function addMap (mapContainer, callback) {
     // Add a basic style.
     map.data.setStyle(function (feature) {
       var mag = parseFloat(feature.getProperty('value')) * 0.001
+      var color = dataLayer.getCadastralClasificationColor(feature)
+
       return /** @type {google.maps.Data.StyleOptions} */({
+        fillColor: color,
         icon: {
           path: google.maps.SymbolPath.CIRCLE,
           scale: mag,
@@ -57,6 +61,8 @@ function addMap (mapContainer, callback) {
 
     map.data.addListener('click', function (event) {
       pane.show(event.feature)
+      map.data.revertStyle()
+      map.data.overrideStyle(event.feature, {strokeColor: '#f00'})
     })
 
     map.addListener('click', pane.close)

@@ -1,6 +1,7 @@
 require('es6-promise').polyfill()
 require('isomorphic-fetch')
 const env = require('../env')
+const color = require('./cadastralClasificationColors')
 
 function createLayerFromBoundingBox (bbox, next) {
   var layer
@@ -62,7 +63,20 @@ function getConstructionUnits (dataFeature) {
   }
 }
 
+function getCadastralClasificationColor (feature) {
+  if (feature.getProperty('cadastralData') &&
+    feature.getProperty('cadastralData').bico &&
+    feature.getProperty('cadastralData').bico.lspr &&
+    feature.getProperty('cadastralData').bico.lspr.spr &&
+    (feature.getProperty('cadastralData').bico.lspr.spr.length > 0)) {
+    return color[feature.getProperty('cadastralData').bico.lspr.spr[0].dspr.dcc]
+  } else {
+    return color.no_use_defined
+  }
+}
+
 module.exports = {
   createLayerFromBoundingBox: createLayerFromBoundingBox,
+  getCadastralClasificationColor: getCadastralClasificationColor,
   wrapParcelData: wrapParcelData
 }
