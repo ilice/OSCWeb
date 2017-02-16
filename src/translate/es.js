@@ -22,5 +22,6 @@ module.exports = {
   'suggest-an-edit': 'Sugerir un cambio',
   'claim-plot': 'Reclamar esta parcela',
   'area': 'Superficie catastral {squareMeters, number} m\xB2',
-  'altitude': 'Altitud media {meters, number} m'
+  'altitude': 'Altitud media {meters, number} m',
+  'construction-units': '{units, plural, =0 {Sin unidades constructivas} =1 {Una unidad constructiva} other {{units} unidades constructivas}}'
 }

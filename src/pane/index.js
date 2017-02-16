@@ -59,10 +59,11 @@ function show (dataFeature) {
       var sectionInfo = yo`<div class="section-info"></div>`
       widgetPane.appendChild(sectionInfo)
 
-      appendSectionInfo(sectionInfo, 'photo_size_select_small', 'area', {squareMeters: dataFeature.getProperty('areaValue')})
-      appendSectionInfo(sectionInfo, 'photo_size_select_actual', 'altitude', {meters: dataFeature.getProperty('elevation')})
+      appendSectionInfo(sectionInfo, 'photo_size_select_small', 'area', {squareMeters: dataFeature.areaValue})
+      appendSectionInfo(sectionInfo, 'filter_hdr', 'altitude', {meters: dataFeature.elevation})
+      appendSectionInfo(sectionInfo, 'store', 'construction-units', {units: dataFeature.constructionUnits})
       appendSectionInfo(sectionInfo, 'mode_edit', 'suggest-an-edit')
-      appendSectionInfo(sectionInfo, 'security', 'claim-plot')
+      appendSectionInfo(sectionInfo, 'verified_user', 'claim-plot')
     }
   }
 }

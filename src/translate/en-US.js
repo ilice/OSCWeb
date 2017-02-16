@@ -22,5 +22,6 @@ module.exports = {
   'suggest-an-edit': 'Suggest an edit',
   'claim-plot': 'Claim this plot',
   'area': 'Cadastral area {squareMeters, number} m\xB2',
-  'altitude': 'Average altitude {meters, number} m'
+  'altitude': 'Average altitude {meters, number} m',
+  'construction-units': '{units, plural, =0 {No construction units} =1 {One construction unit} other {{units} construction units}}'
 }

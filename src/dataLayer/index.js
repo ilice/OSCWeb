@@ -39,16 +39,26 @@ function loadLayer (layer, bbox, next) {
 }
 
 function wrapParcelData (dataFeature) {
-  var wrappedDataFeature = dataFeature
-  wrappedDataFeature.nationalCadastralReference = dataFeature.getProperty('nationalCadastralReference')
-  wrappedDataFeature.areaValue = dataFeature.getProperty('areaValue')
-  wrappedDataFeature.address = getAddress(dataFeature)
-  return wrappedDataFeature
+  return {
+    nationalCadastralReference: dataFeature.getProperty('nationalCadastralReference'),
+    elevation: dataFeature.getProperty('elevation'),
+    areaValue: dataFeature.getProperty('areaValue'),
+    address: getAddress(dataFeature),
+    constructionUnits: getConstructionUnits(dataFeature)
+  }
 }
 
 function getAddress (dataFeature) {
   if (dataFeature.getProperty('cadastralData').bico) {
     return dataFeature.getProperty('cadastralData').bico.bi.ldt
+  }
+}
+
+function getConstructionUnits (dataFeature) {
+  if (dataFeature.getProperty('cadastralData') && dataFeature.getProperty('cadastralData').control && dataFeature.getProperty('cadastralData').control.cucons) {
+    return dataFeature.getProperty('cadastralData').control.cucons
+  } else {
+    return 0
   }
 }
 
