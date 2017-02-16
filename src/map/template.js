@@ -63,6 +63,9 @@ function addMap (mapContainer, callback) {
     })
 
     map.data.addListener('click', function (event) {
+      if (event.feature.getGeometry().getType() === 'Point') {
+        event.feature.getGeometry().forEachLatLng(function (latLng) { map.setOptions({center: latLng, zoom: 12}) })
+      }
       pane.show(event.feature)
       map.data.revertStyle()
       map.data.overrideStyle(event.feature, {strokeColor: '#f00'})
