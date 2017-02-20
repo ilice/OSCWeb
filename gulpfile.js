@@ -172,7 +172,7 @@ gulp.task('dev-environment', ['secrets'], function () {
 
 gulp.task('prod-environment', ['secrets'], function () {
   gulp
-    .src('settings/dev.js')
+    .src('settings/prod.js')
     .pipe(rename('index.js'))
     .pipe(gulp.dest('src/env'))
 })
