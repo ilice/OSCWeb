@@ -1,5 +1,5 @@
 const secrets = require('./secrets')
 module.exports = {
   GOOGLE_API_KEY: secrets.GOOGLE_API_KEY,
-  CADASTRAL_PARCEL_URI: '/cadastral/parcel/'
+  CADASTRAL_PARCEL_URI: 'http://oscapi:8000/cadastral/parcel/'
 }

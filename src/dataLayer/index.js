@@ -50,7 +50,7 @@ function wrapParcelData (dataFeature) {
 }
 
 function getAddress (dataFeature) {
-  if (dataFeature.getProperty('cadastralData').bico) {
+  if (dataFeature.getProperty('cadastralData') && dataFeature.getProperty('cadastralData').bico) {
     return dataFeature.getProperty('cadastralData').bico.bi.ldt
   }
 }

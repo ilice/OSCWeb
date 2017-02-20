@@ -58,7 +58,8 @@ function addMap (mapContainer, callback) {
         map.data.remove(feature)
       })
 
-      var url = env.CADASTRAL_PARCEL_URI + '?bbox=' + bbox.toUrlValue()
+      var precision = map.getZoom() < 17 ? '&precision=' + (map.getZoom() / 2).toFixed() : ''
+      var url = env.CADASTRAL_PARCEL_URI + '?bbox=' + bbox.toUrlValue() + precision
       map.data.loadGeoJson(url, null, status.loaded)
     })
 
