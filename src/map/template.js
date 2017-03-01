@@ -33,7 +33,10 @@ function addMap (mapContainer, callback) {
 
     // Add a basic style.
     map.data.setStyle(function (feature) {
-      // var mag = parseFloat(feature.getProperty('value')) * 0.001
+      var scaleWidth = feature.getProperty('max_value') - feature.getProperty('min_value')
+      var ratedValue = scaleWidth > 1 ? (feature.getProperty('value') - feature.getProperty('min_value')) / scaleWidth : 1
+      var mag = 20 * ratedValue
+      var fillColor = ratedValue > 0.7 ? '#f00' : ratedValue < 0.2 ? '#1f990c' : '#ffbb00'
       var color = dataLayer.getCadastralClasificationColor(feature)
       var title = translate.message('num-parcels', {amount: feature.getProperty('value')})
 
@@ -42,8 +45,8 @@ function addMap (mapContainer, callback) {
         title: title,
         icon: {
           path: google.maps.SymbolPath.CIRCLE,
-          // scale: mag,
-          fillColor: '#f00',
+          scale: mag,
+          fillColor: fillColor,
           fillOpacity: 0.35,
           strokeWeight: 0
         }
