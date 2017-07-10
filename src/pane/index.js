@@ -13,7 +13,7 @@ function show (dataFeature) {
   if (dataFeature) {
     if (dataFeature.getGeometry().getType() !== 'Point') {
       dataFeature = dataLayer.wrapParcelData(dataFeature)
-      var widgetPane = yo`<div class="widget-pane"></section></div>`
+      var widgetPane = yo`<div class="widget-pane"></div>`
       empty(el).appendChild(widgetPane)
 
       var sectionHeroHeader = yo`<section class="section-hero-header"></section>`
