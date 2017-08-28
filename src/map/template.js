@@ -38,6 +38,7 @@ function addMap (mapContainer, callback) {
       var mag = 20 * ratedValue
       var fillColor = ratedValue > 0.7 ? '#f00' : ratedValue < 0.2 ? '#1f990c' : '#ffbb00'
       var color = dataLayer.getCadastralClasificationColor(feature)
+      var strokeColor = dataLayer.getSigpacClasificationColor(feature)
       var title = translate.message('num-parcels', {amount: feature.getProperty('value')})
 
       return /** @type {google.maps.Data.StyleOptions} */({
@@ -47,6 +48,7 @@ function addMap (mapContainer, callback) {
           path: google.maps.SymbolPath.CIRCLE,
           scale: mag,
           fillColor: fillColor,
+          strokeColor: strokeColor,
           fillOpacity: 0.35,
           strokeWeight: 0
         }
@@ -62,7 +64,7 @@ function addMap (mapContainer, callback) {
       })
 
       var precision = map.getZoom() < 17 ? '&precision=' + (map.getZoom() / 2).toFixed() : ''
-      var url = env.CADASTRAL_PARCEL_URI + '?bbox=' + bbox.toUrlValue() + precision
+      var url = env.CADASTRAL_PARCEL_URI + '?bbox=' + bbox.toUrlValue() + precision + '&format=json'
       map.data.loadGeoJson(url, null, status.loaded)
     })
 
@@ -72,7 +74,7 @@ function addMap (mapContainer, callback) {
       }
       pane.show(event.feature)
       map.data.revertStyle()
-      map.data.overrideStyle(event.feature, {strokeColor: '#f00'})
+      map.data.overrideStyle(event.feature, {strokeColor: dataLayer.getSigpacClasificationColor(event.feature), strokeWeight: 1})
     })
 
     map.addListener('click', pane.close)

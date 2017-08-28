@@ -45,6 +45,7 @@
     "gulp-size": "^2.1.0",
     "gulp-spawn-mocha": "^3.1.0",
     "gulp-standard": "^8.0.3",
+    "gulp-util": "^3.0.8",
     "jsdom": "^9.9.1",
     "jsdom-global": "^2.1.1",
     "localStorage": "^1.0.3",
@@ -55,6 +56,7 @@
   },
   "scripts": {
     "test": "npm run lint && gulp test",
+    "test-server": "gulp test-server",
     "build": "gulp",
     "start": "gulp && node ./server.js",
     "lint": "gulp lint",

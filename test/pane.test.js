@@ -21,6 +21,9 @@ describe('Pane', function () {
   describe('# Show feature in pane', function () {
     const pane = require('../src/pane')
     const parcelFeature = require('./fixtures').getParcelFeature()
+
+    //Adds methods (getProperty and getGeometry) from google.maps.Data.Feature class
+
     parcelFeature.getProperty = function getProperty (property) {
       return parcelFeature.properties[property]
     }

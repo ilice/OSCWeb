@@ -16,6 +16,8 @@ const size = require('gulp-size')
 const psi = require('psi')
 const nodemon = require('gulp-nodemon')
 const mocha = require('gulp-spawn-mocha')
+var gutil = require('gulp-util');
+
 
 // Lint JavaScript
 gulp.task('lint', function () {
@@ -191,6 +193,17 @@ gulp.task('test', ['test-environment'], function () {
       globals: {
         chai: require('chai'),
         register: require('jsdom-global/register')
-      }
+      },
+      checkLeaks: true
     }))
 })
+
+gulp.task('test-server', ['test-environment'], function() {
+      gulp.watch(['lib/**', 'test/**'], ['mocha']);
+});
+
+gulp.task('mocha', function() {
+    return gulp.src(['test/*.test.js'], { read: false })
+        .pipe(mocha({ reporter: 'spec' }))
+        .on('error', gutil.log);
+});

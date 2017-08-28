@@ -23,7 +23,7 @@ function checkBbox (bbox) {
 function loadLayer (layer, bbox, next) {
   var err = checkBbox(bbox)
   if (!err) {
-    fetch(env.CADASTRAL_PARCEL_URI + '/?bbox=' + bbox.toString())
+    fetch(env.CADASTRAL_PARCEL_URI + '?bbox=' + bbox.toString() + '&format=json')
       .then(function (res) {
         return res.json()
       })
@@ -64,19 +64,32 @@ function getConstructionUnits (dataFeature) {
 }
 
 function getCadastralClasificationColor (feature) {
-  if (feature.getProperty('cadastralData') &&
-    feature.getProperty('cadastralData').bico &&
-    feature.getProperty('cadastralData').bico.lspr &&
-    feature.getProperty('cadastralData').bico.lspr.spr &&
-    (feature.getProperty('cadastralData').bico.lspr.spr.length > 0)) {
-    return color[feature.getProperty('cadastralData').bico.lspr.spr[0].dspr.dcc]
+  return color[getCadastralUse(feature)]
+}
+
+function getSigpacClasificationColor (feature) {
+  return color[getSigpacUse(feature)]
+}
+
+function getCadastralUse (feature) {
+  if (feature.getProperty('cadastralData')) {
+    return feature.getProperty('cadastralData').use
   } else {
-    return color.no_use_defined
+    return 'no_use_defined'
+  }
+}
+
+function getSigpacUse (feature) {
+  if (feature.getProperty('sigpacData')) {
+    return feature.getProperty('sigpacData').use
+  } else {
+    return 'no_use_defined'
   }
 }
 
 module.exports = {
   createLayerFromBoundingBox: createLayerFromBoundingBox,
   getCadastralClasificationColor: getCadastralClasificationColor,
+  getSigpacClasificationColor: getSigpacClasificationColor,
   wrapParcelData: wrapParcelData
 }
