@@ -64,7 +64,8 @@ function addMap (mapContainer, callback) {
       })
 
       var precision = map.getZoom() < 17 ? '&precision=' + (map.getZoom() / 2).toFixed() : ''
-      var url = env.CADASTRAL_PARCEL_URI + '?bbox=' + bbox.toUrlValue() + precision + '&format=json'
+      var bboxURL = 'bbox=' + bbox.toJSON().west + ',' + bbox.toJSON().south + ',' + bbox.toJSON().east + ',' + bbox.toJSON().north
+      var url = env.CADASTRAL_PARCEL_URI + '?' + bboxURL + precision + '&format=json'
       map.data.loadGeoJson(url, null, status.loaded)
     })
 

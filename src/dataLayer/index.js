@@ -56,8 +56,8 @@ function getAddress (dataFeature) {
 }
 
 function getConstructionUnits (dataFeature) {
-  if (dataFeature.getProperty('cadastralData') && dataFeature.getProperty('cadastralData').control && dataFeature.getProperty('cadastralData').control.cucons) {
-    return dataFeature.getProperty('cadastralData').control.cucons
+  if (dataFeature.getProperty('cadastralData')) {
+    return dataFeature.getProperty('cadastralData').constructionUnits
   } else {
     return 0
   }
