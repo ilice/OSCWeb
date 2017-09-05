@@ -19,7 +19,7 @@ function show (dataFeature) {
       var sectionHeroHeader = yo`<section class="section-hero-header"></section>`
       widgetPane.appendChild(sectionHeroHeader)
 
-      var imageButton = yo`<button class="button"><img src=""/ class="section-hero-header-button-image"/></button>`
+      var imageButton = yo`<button class="button"><img class="section-hero-header-button-image"/></button>`
       sectionHeroHeader.appendChild(imageButton)
 
       omnibox.input.value = dataFeature.nationalCadastralReference
