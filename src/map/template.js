@@ -37,8 +37,9 @@ function addMap (mapContainer, callback) {
       var ratedValue = scaleWidth > 1 ? (feature.getProperty('value') - feature.getProperty('min_value')) / scaleWidth : 1
       var mag = 20 * ratedValue
       var fillColor = ratedValue > 0.7 ? '#f00' : ratedValue < 0.2 ? '#1f990c' : '#ffbb00'
-      var color = dataLayer.getCadastralClasificationColor(feature)
-      var strokeColor = dataLayer.getSigpacClasificationColor(feature)
+      var color = dataLayer.getSigpacClasificationColor(feature)
+      var strokeColor = dataLayer.getCadastralClasificationColor(feature)
+      var strokeWeight = feature.getGeometry().getType() === 'Point' ? 0 : 1
       var title = translate.message('num-parcels', {amount: feature.getProperty('value')})
 
       return /** @type {google.maps.Data.StyleOptions} */({
@@ -48,10 +49,11 @@ function addMap (mapContainer, callback) {
           path: google.maps.SymbolPath.CIRCLE,
           scale: mag,
           fillColor: fillColor,
-          strokeColor: strokeColor,
           fillOpacity: 0.35,
           strokeWeight: 0
-        }
+        },
+        strokeColor: strokeColor,
+        strokeWeight: strokeWeight
       })
     })
 
