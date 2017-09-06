@@ -45,13 +45,15 @@ function wrapParcelData (dataFeature) {
     elevation: dataFeature.getProperty('elevation'),
     areaValue: dataFeature.getProperty('areaValue'),
     address: getAddress(dataFeature),
-    constructionUnits: getConstructionUnits(dataFeature)
+    constructionUnits: getConstructionUnits(dataFeature),
+    cadastralUse: getCadastralUse(dataFeature),
+    sigpacUse: getSigpacUse(dataFeature)
   }
 }
 
 function getAddress (dataFeature) {
-  if (dataFeature.getProperty('cadastralData') && dataFeature.getProperty('cadastralData').bico) {
-    return dataFeature.getProperty('cadastralData').bico.bi.ldt
+  if (dataFeature.getProperty('cadastralData')) {
+    return dataFeature.getProperty('cadastralData').address
   }
 }
 

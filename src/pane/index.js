@@ -62,6 +62,8 @@ function show (dataFeature) {
       appendSectionInfo(sectionInfo, 'photo_size_select_small', 'area', {squareMeters: dataFeature.areaValue})
       appendSectionInfo(sectionInfo, 'filter_hdr', 'altitude', {meters: dataFeature.elevation})
       appendSectionInfo(sectionInfo, 'store', 'construction-units', {units: dataFeature.constructionUnits})
+      appendSectionInfo(sectionInfo, 'center_focus_weak', 'cadastral-use', {use: dataFeature.cadastralUse})
+      appendSectionInfo(sectionInfo, 'center_focus_strong', 'sigpac-use', {use: dataFeature.sigpacUse})
       appendSectionInfo(sectionInfo, 'mode_edit', 'suggest-an-edit')
       appendSectionInfo(sectionInfo, 'verified_user', 'claim-plot')
     }

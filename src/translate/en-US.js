@@ -24,5 +24,7 @@ module.exports = {
   'area': 'Cadastral area {squareMeters, number} m\xB2',
   'altitude': 'Average altitude {meters, number} m',
   'construction-units': '{units, plural, =0 {No construction units} =1 {One construction unit} other {{units} construction units}}',
-  'num-parcels': '{amount, number} plots'
+  'num-parcels': '{amount, number} plots',
+  'cadastral-use': 'Cadastral use: {use}',
+  'sigpac-use': 'Sigpac use: {use}',
 }

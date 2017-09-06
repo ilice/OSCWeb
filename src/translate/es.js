@@ -24,5 +24,7 @@ module.exports = {
   'area': 'Superficie catastral {squareMeters, number} m\xB2',
   'altitude': 'Altitud media {meters, number} m',
   'construction-units': '{units, plural, =0 {Sin unidades constructivas} =1 {Una unidad constructiva} other {{units} unidades constructivas}}',
-  'num-parcels': '{amount, number} parcelas'
+  'num-parcels': '{amount, number} parcelas',
+  'cadastral-use': 'Uso catastral: {use}',
+  'sigpac-use': 'Uso según sigpac: {use}',
 }
