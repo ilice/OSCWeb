@@ -82,7 +82,7 @@ describe('Data Layer', function () {
 
     it('should obtain poligon coordinates for Feature cadastral parcel in bounding box', function (done) {
       var dataLayer = require('../src/dataLayer')
-      var bbox = [40.43917746743397, -5.757829017646071, 40.439409063444636, -5.757541644814119]
+      var bbox = [-5.757829017646071, 40.43917746743397, -5.757541644814119, 40.439409063444636]
       dataLayer.createLayerFromBoundingBox(bbox, function (err, layer) {
         expect(err).to.be.a('null')
         expect(layer).to.have.property('type', 'FeatureCollection')
@@ -101,7 +101,7 @@ describe('Data Layer', function () {
 
     it('should obtain Feature cadastral parcel properties in bounding box', function (done) {
       var dataLayer = require('../src/dataLayer')
-      var bbox = [40.43917746743397, -5.757829017646071, 40.439409063444636, -5.757541644814119]
+      var bbox = [-5.757829017646071, 40.43917746743397, -5.757541644814119, 40.439409063444636]
       dataLayer.createLayerFromBoundingBox(bbox, function (err, layer) {
         expect(err).to.be.a('null')
         expect(layer.features[0]).to.have.property('properties')
