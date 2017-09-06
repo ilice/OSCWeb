@@ -26,5 +26,5 @@ module.exports = {
   'construction-units': '{units, plural, =0 {No construction units} =1 {One construction unit} other {{units} construction units}}',
   'num-parcels': '{amount, number} plots',
   'cadastral-use': 'Cadastral use: {use}',
-  'sigpac-use': 'Sigpac use: {use}',
+  'sigpac-use': 'Sigpac use: {use}'
 }
