@@ -120,64 +120,40 @@ describe('Data Layer', function () {
 
     const isColorRegExp = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i
 
-    it('should return a color for a parcel feature from its cadastral use', function (done) {
+    it('should return a color for a parcel feature from its cadastral use', function () {
       var dataLayer = require('../src/dataLayer')
-      fs.readFile('./test/fixtures/parcel_feature_sample.json', (err, data) => {
-        if (err) throw err
-        parcelFeature = JSON.parse(data)
-        //Adds methods (getProperty) from google.maps.Data.Feature class
-        parcelFeature.getProperty = function getProperty (property) {
-          return parcelFeature.properties[property]
-        }
-        let color = dataLayer.getCadastralClasificationColor(parcelFeature)
-        expect(isColorRegExp.test(color)).to.be.ok
-        done()
-      })
+
+      const parcelFeature = require('./fixtures').getGoogleMapsParcelFeature()
+
+      let color = dataLayer.getCadastralClasificationColor(parcelFeature)
+      expect(isColorRegExp.test(color)).to.be.ok
     })
 
-    it('should return a color for a parcel feature from its cadastral use', function (done) {
+    it('should return a color for a parcel feature from its cadastral use', function () {
       var dataLayer = require('../src/dataLayer')
-      fs.readFile('./test/fixtures/parcel_feature_sample.json', (err, data) => {
-        if (err) throw err
-        parcelFeature = JSON.parse(data)
-        //Adds methods (getProperty) from google.maps.Data.Feature class
-        parcelFeature.getProperty = function getProperty (property) {
-          return parcelFeature.properties[property]
-        }
-        let color = dataLayer.getSigpacClasificationColor(parcelFeature)
-        expect(isColorRegExp.test(color)).to.be.ok
-        done()
-      })
+
+      const parcelFeature = require('./fixtures').getGoogleMapsParcelFeature()
+
+      let color = dataLayer.getSigpacClasificationColor(parcelFeature)
+      expect(isColorRegExp.test(color)).to.be.ok
     })
 
-    it('should return the correct color of the parcel from its cadastral use', function (done) {
+    it('should return the correct color of the parcel from its cadastral use', function () {
       var dataLayer = require('../src/dataLayer')
-      fs.readFile('./test/fixtures/parcel_feature_sample.json', (err, data) => {
-        if (err) throw err
-        parcelFeature = JSON.parse(data)
-        //Adds methods (getProperty) from google.maps.Data.Feature class
-        parcelFeature.getProperty = function getProperty (property) {
-          return parcelFeature.properties[property]
-        }
-        let color = dataLayer.getCadastralClasificationColor(parcelFeature)
-        expect(color).to.equal('#ffe39e')
-        done()
-      })
+
+      const parcelFeature = require('./fixtures').getGoogleMapsParcelFeature()
+
+      let color = dataLayer.getCadastralClasificationColor(parcelFeature)
+      expect(color).to.equal('#ffe39e')
     })
 
-    it('should return the correct color of the parcel from its cadastral use', function (done) {
+    it('should return the correct color of the parcel from its cadastral use', function () {
       var dataLayer = require('../src/dataLayer')
-      fs.readFile('./test/fixtures/parcel_feature_sample.json', (err, data) => {
-        if (err) throw err
-        parcelFeature = JSON.parse(data)
-        //Adds methods (getProperty) from google.maps.Data.Feature class
-        parcelFeature.getProperty = function getProperty (property) {
-          return parcelFeature.properties[property]
-        }
-        let color = dataLayer.getSigpacClasificationColor(parcelFeature)
-        expect(color).to.equal('#000000')
-        done()
-      })
+
+      const parcelFeature = require('./fixtures').getGoogleMapsParcelFeature()
+      let color = dataLayer.getSigpacClasificationColor(parcelFeature)
+
+      expect(color).to.equal('#000000')
     })
 
 

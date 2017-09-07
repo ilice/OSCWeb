@@ -25,6 +25,50 @@ module.exports = {
   'altitude': 'Average altitude {meters, number} m',
   'construction-units': '{units, plural, =0 {No construction units} =1 {One construction unit} other {{units} construction units}}',
   'num-parcels': '{amount, number} plots',
-  'cadastral-use': 'Cadastral use: {use}',
-  'sigpac-use': 'Sigpac use: {use}'
+  'cadastral-use': `Cadastral use: {use, select, FRUTALES_SECANO {Dry fruit}
+                                                 IMPRODUCTIVO {Unproductive}
+                                                 LABOR_O_LABRADÍO_SECANO {Arable or dry arable}
+                                                 LABOR_O_LABRADÍO_REGADÍO {Arable or irrigation arable}
+                                                 MONTE_BAJO {Mount low}
+                                                 PASTOS {Pastures}
+                                                 PRADOS_O_PRADERAS {Pastures or grasslands}
+                                                 ROBLEDAL {Robledal}
+                                                 VIÑA_SECANO {Dry vineyard}
+                                                 VÍA_DE_COMUNICACIÓN_DE_DOMINIO_PÚBLICO {Vials}
+                                                 no_use_defined {No use defined}
+                                                 other {Not found}
+                                               }`,
+  'sigpac-use': `Uso según sigpac: {use, select, AG {Water}
+                                                 CA {Vials}
+                                                 CF {Citrus-fruit}
+                                                 CI {Citrus}
+                                                 CO {Olive contour}
+                                                 CS {Citrus-fruit in shell}
+                                                 CV {Citrus-vineyard}
+                                                 ED {Buildings}
+                                                 FF {Fruit-fruit in shell}
+                                                 FL {Nuts-olive}
+                                                 FO {Forest}
+                                                 FS {Nuts}
+                                                 FV {Nuts-vineyard}
+                                                 FY {Fruit}
+                                                 IM {Unproductive}
+                                                 IS {Islands}
+                                                 IV {Greenhouses}
+                                                 OC {Olive-citrus}
+                                                 OF {Olive-fruit}
+                                                 OV {Olive}
+                                                 PA {Grass with trees}
+                                                 PR {Shrub grass}
+                                                 PS {Pastureland}
+                                                 TA {Arable land}
+                                                 TH {Orchard}
+                                                 VF {Vineyard-fruit}
+                                                 VI {Vineyard}
+                                                 VO {Vineyard-olive}
+                                                 ZC {Concentrated zone}
+                                                 ZU {Urban zone}
+                                                 ZV {Censured zone}
+                                                 no_use_defined {No use defined}
+                                                 other {Not found}}`
 }

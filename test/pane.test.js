@@ -20,21 +20,8 @@ describe('Pane', function () {
 
   describe('# Show feature in pane', function () {
     const pane = require('../src/pane')
-    const parcelFeature = require('./fixtures').getParcelFeature()
-
-    //Adds methods (getProperty and getGeometry) from google.maps.Data.Feature class
-
-    parcelFeature.getProperty = function getProperty (property) {
-      return parcelFeature.properties[property]
-    }
-
-    parcelFeature.getGeometry = function getGeometry () {
-      var geometry = parcelFeature.geometry
-      geometry.getType = function getType () {
-        return geometry.type
-      }
-      return geometry
-    }
+    
+    const parcelFeature = require('./fixtures').getGoogleMapsParcelFeature()
 
     it('should have a hero header section with an image button', function () {
       pane.show(parcelFeature)

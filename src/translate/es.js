@@ -25,6 +25,50 @@ module.exports = {
   'altitude': 'Altitud media {meters, number} m',
   'construction-units': '{units, plural, =0 {Sin unidades constructivas} =1 {Una unidad constructiva} other {{units} unidades constructivas}}',
   'num-parcels': '{amount, number} parcelas',
-  'cadastral-use': 'Uso catastral: {use}',
-  'sigpac-use': 'Uso según sigpac: {use}'
+  'cadastral-use': `Cadastral use: {use, select, FRUTALES_SECANO {Frutales secano}
+                                                 IMPRODUCTIVO {Improductivo}
+                                                 LABOR_O_LABRADÍO_SECANO {Labor o labradío secano}
+                                                 LABOR_O_LABRADÍO_REGADÍO {Labor o labradío regadío}
+                                                 MONTE_BAJO {Monte bajo}
+                                                 PASTOS {Pastos}
+                                                 PRADOS_O_PRADERAS {Pastos o praderas}
+                                                 ROBLEDAL {Robledal}
+                                                 VIÑA_SECANO {Viña secano}
+                                                 VÍA_DE_COMUNICACIÓN_DE_DOMINIO_PÚBLICO {Viales}
+                                                 no_use_defined {Sin uso definido}
+                                                 other {No encontrado}
+                                               }`,
+  'sigpac-use': `Uso según sigpac: {use, select, AG {Agua}
+                                                 CA {Viales}
+                                                 CF {Cítricos-frutales}
+                                                 CI {Cítricos}
+                                                 CO {Contorno olivar}
+                                                 CS {Cítricos-frutales cáscara}
+                                                 CV {Cítricos-viñedo}
+                                                 ED {Edificaciones}
+                                                 FF {Frutales-frutales cáscara}
+                                                 FL {Frutos secos-olivar}
+                                                 FO {Forestal}
+                                                 FS {Frutos secos}
+                                                 FV {Frutos secos-viñedo}
+                                                 FY {Frutales}
+                                                 IM {Improductivos}
+                                                 IS {Islas}
+                                                 IV {Invernaderos y cultivos bajo plásticos}
+                                                 OC {Olivar-cítricos}
+                                                 OF {Olivar-frutal}
+                                                 OV {Olivar}
+                                                 PA {Pasto con arbolado}
+                                                 PR {Pasto arbustivo}
+                                                 PS {Pastizal}
+                                                 TA {Tierras arables}
+                                                 TH {Huerta}
+                                                 VF {Viñedo-frutal}
+                                                 VI {Viñedo}
+                                                 VO {Viñedo-olivar}
+                                                 ZC {Zona concentrada}
+                                                 ZU {Zona urbana}
+                                                 ZV {Zona censurada}
+                                                 no_use_defined {No use defined}
+                                                 other {No encontrado}}`
 }
